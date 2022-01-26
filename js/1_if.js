@@ -17,15 +17,6 @@
     */
 
     // *case.1 현재시간이 오후인가 오전인가.
-
-
-$(document).ready(function(){
-    avgScore2();
-});
-
-
-
-
     function amORpm(){
         var date = new Date();
         var hour = date.getHours();
@@ -77,9 +68,9 @@ $(document).ready(function(){
         var numb = prompt('숫자를 입력하세요.','홀,짝 구분가능함');
 
         // todo. if logic
-        if(numb%2 == 0){
+        if(numb%2 === 0){
             alert('짝수');
-        }else if(numb%2 == 1){
+        }else if(numb%2 === 1){
             alert('홀수');
         }else{
             alert('숫자가아닙니다.');
@@ -125,7 +116,7 @@ $(document).ready(function(){
         var userID = window.prompt('사용자의 아이디');
         var userPW = window.prompt('사용자의 패스워드');
         if(userID == 'gibeom' && userPW == '1234'){
-            alert('Mark님으로 확인되었습니다.');
+            alert('gibeom님으로 확인되었습니다.');
         }else if(userID != 'gibeom' || userPW != '1234'){
             alert('ID 혹은 Password가 틀렸습니다.');
         }
@@ -147,7 +138,7 @@ $(document).ready(function(){
         // ? if 처리부
        if(userID=="gibeom"&&userPW=="1234"){
             //? 출력부
-            alert("Mark님으로 확인되었습니다.");
+            alert("gibeom님으로 확인되었습니다.");
         }
         // ? else if 처리부
         else if(userID!='gibeom'){
@@ -162,40 +153,40 @@ $(document).ready(function(){
     }
 
 
-//todo hw.1 각 수를 입력 받아 해당하는 조건의 메시지를 출력하라.
-//? 1일 경우 "1등 10억", 2일 경우 "2등 5천만원", 3일 경우 "3등 300만원", 그외 수일 경우 "낙첨되었습니다."
-function lotto(){
-    var lottoinput = window.prompt('숫자를 입력하세요');
-    if(lottoinput === '1'){
-        alert('축하드립니다. 1등 10억 입니다.');
-    }else if(lottoinput === '2'){
-        alert('축하드립니다. 2등 5천만원 입니다.');
-    }else if(lottoinput === '3'){
-        alert('축하드립니다. 3등 300만원 입니다.');
-    }else{
-        alert('낙첨되었습니다.');
+    //todo hw.1 각 수를 입력 받아 해당하는 조건의 메시지를 출력하라.
+    //? 1일 경우 "1등 10억", 2일 경우 "2등 5천만원", 3일 경우 "3등 300만원", 그외 수일 경우 "낙첨되었습니다."
+    function lotto(){
+        var lottoinput = window.prompt('숫자를 입력하세요');
+        if(lottoinput === '1'){
+            alert('축하드립니다. 1등 10억 입니다.');
+        }else if(lottoinput === '2'){
+            alert('축하드립니다. 2등 5천만원 입니다.');
+        }else if(lottoinput === '3'){
+            alert('축하드립니다. 3등 300만원 입니다.');
+        }else{
+            alert('낙첨되었습니다.');
+        }
     }
-}
 
 
 
-//todo hw.2 다음 코드를 간소화 시키시오.
-function btnMouseEx(){
-    var clickBtn = window.prompt("누르실 마우스 버튼을 입력하세요 (왼쪽,오른쪽,가운데)");
+    //todo hw.2 다음 코드를 간소화 시키시오.
+    function btnMouseEx(){
+        var clickBtn = window.prompt("누르실 마우스 버튼을 입력하세요 (왼쪽,오른쪽,가운데)");
 
-    // if(clickBtn=="오른쪽"){
-    //     document.write("오른쪽!");
-    // }else if(clickBtn=="왼쪽"){
-    //     document.write("왼쪽!");
-    // }else if(clickBtn=="가운데"){
-    //     document.write("가운데!");
-    // }else{
-    //     document.write("올바른값을 입력하세요.");
-    // }
-    
-    if(clickBtn=="오른쪽" || clickBtn=="왼쪽" || clickBtn=="가운데" ){
-        document.write(clickBtn+"!");
-    }else{
-        document.write("올바른값을 입력하세요.");
+        // if(clickBtn=="오른쪽"){
+        //     document.write("오른쪽!");
+        // }else if(clickBtn=="왼쪽"){
+        //     document.write("왼쪽!");
+        // }else if(clickBtn=="가운데"){
+        //     document.write("가운데!");
+        // }else{
+        //     document.write("올바른값을 입력하세요.");
+        // }
+        
+        if(clickBtn=="오른쪽" || clickBtn=="왼쪽" || clickBtn=="가운데" ){
+            document.write(clickBtn+"!");
+        }else{
+            document.write("올바른값을 입력하세요.");
+        }
     }
-}
