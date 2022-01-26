@@ -27,6 +27,7 @@
             alert('오후입니다.');
         }
     }
+
     //?case_2 말일인가 아닌가
     function lastDay(){
         var date = new Date();
@@ -38,6 +39,7 @@
             alert('말일입니다.');
         }
     }
+
     //?case_3 아침?점심?저녁?
     function mealTime(){
         var date = new Date();
@@ -51,6 +53,7 @@
             alert('저녁먹을시간');
         }
     }
+
     // * exp.1 숫자판별
     function numbJudgment(){
         var numb = prompt('숫자를입력해봐','양,음수상관없음');
@@ -63,7 +66,8 @@
             //? 내가 무엇을 놓치고 있는가?
         }
     }
-    // todo.1 홀,짝 판별
+
+    // todo.1 홀수,짝수 판별
     function oddOrEven(){
         var numb = prompt('숫자를 입력하세요.','홀,짝 구분가능함');
 
