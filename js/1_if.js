@@ -18,14 +18,21 @@
 
     // *case.1 현재시간이 오후인가 오전인가.
 
+
+$(document).ready(function(){
+    avgScore2();
+});
+
+
+
+
     function amORpm(){
         var date = new Date();
         var hour = date.getHours();
         
         if(hour < 12){
             alert('오전입니다.');
-        }
-        if(hour >= 12){
+        }else if(hour >= 12){
             alert('오후입니다.');
         }
     }
@@ -78,27 +85,21 @@
             alert('숫자가아닙니다.');
         }
     }
-    // *exp.3 다음 세과목의 점수를 입력받고 평균을 구한 후 수,우,미,양,가를 출력.
-    function avgScore(){
+    // *exp.3 다음 세과목의 점수를 입력받고 평균을 구한 상, 중, 하 를출력.
+    function avgScore2(){
         var koreanScore= prompt(' 국어점수를 입력하시오'); // ? data type = 문자형
         var englishScore= prompt(' 영어점수를 입력하시오');
         var mathScore= prompt(' 수학점수를 입력하시오');
         var avg = ( Number(koreanScore) + Number(englishScore) + Number(mathScore) ) / 3;
         
         
-        if(avg > 100){
-            alert('평균이어떻게100을넘냐인마. 사기구만');
-        } else if(avg >= 90){
-            alert('평균' + avg + '점 \n' + '수 입니다. 특급!');
-        } else if(avg >= 80){
-            alert('평균' + avg + '점 \n' + '우 입니다. 우수!');
-        } else if(avg >= 70){
-            alert('평균' + avg + '점 \n' + '미 입니다. 괜찮!');
-        } else if(avg >= 60){
-            alert('평균' + avg + '점 \n' + '양 입니다. 망했..');
-        } else{
-            alert('평균' + avg + '점 \n' + '가 입니다. 맞겠..');
-        }
+       if(avg >= 90){
+           alert('상 입니다.');
+       }else if(avg >= 70 ){
+           alert('중 입니다. 조금 더 노력하세요');
+       }else if(avg < 70){
+           alert('하 입니다. 많이 노력하세요');
+       }
     }
 
     // todo.2 사용자 ID(Mark)를 입력받아 맞다면 승인 메시지(승인합니다.) 출력.
@@ -119,13 +120,13 @@
             // ? recall
         }
     }
-    //todo.5 사용자 id "mark"와 password"1234"를 입력받고 둘다 맞을 경우에만 승인 메시지 출력. 
+    //todo.5 사용자 id "gibeom" 과 password"1234"를 입력받고 둘다 맞을 경우에만 승인 메시지 출력. 
     function userInfoCheck(){
         var userID = window.prompt('사용자의 아이디');
         var userPW = window.prompt('사용자의 패스워드');
-        if(userID == 'Mark' && userPW == '1234'){
+        if(userID == 'gibeom' && userPW == '1234'){
             alert('Mark님으로 확인되었습니다.');
-        }else if(userID != 'Mark' || userPW != '1234'){
+        }else if(userID != 'gibeom' || userPW != '1234'){
             alert('ID 혹은 Password가 틀렸습니다.');
         }
     }
@@ -133,7 +134,7 @@
     function userInfoCheck1(){
         var userID = window.prompt('사용자의 아이디');
         var userPW = window.prompt('사용자의 패스워드');
-        (userID == "Mark" && userPW == "1234")? alert("Mark님으로 확인 되었습니다.") : alert("ID 혹은 Password가 틀렸습니다.");
+        (userID == "gibeom" && userPW == "1234")? alert("gibeom님으로 확인 되었습니다.") : alert("ID 혹은 Password가 틀렸습니다.");
     }
 
     //todo.6 사용자 id "mark"와 password"1234"의 정보가 틀릴 경우 틀린 정보에
@@ -144,12 +145,12 @@
        var userPW = window.prompt("사용자의 패스워드");
 
         // ? if 처리부
-       if(userID=="Mark"&&userPW=="1234"){
+       if(userID=="gibeom"&&userPW=="1234"){
             //? 출력부
             alert("Mark님으로 확인되었습니다.");
         }
         // ? else if 처리부
-        else if(userID!='Mark'){
+        else if(userID!='gibeom'){
             //? 출력부
             alert('ID가 존재하지 않습니다.');
             // ? 예외 처리부
