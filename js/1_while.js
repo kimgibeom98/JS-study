@@ -10,14 +10,14 @@
 
 // *exp.1 pw '1234'가 입력되면 '접속승인', 아니면 '잘못입력했습니다.'
 function pwCheck(){
-    while(true){
-        var value = window.prompt('패스워드를입력하세요.');
+   var pw = window.prompt('숫자를 입력하세요');
 
-        if(value == 1234){
-            alert('접속승인!');
+    while(true){
+        if(pw === '1234'){
+            alert('접속승인')
             break;
         }else{
-            alert('잘못입력하였습니다.');
+            alert('잘못입력했습니다.');
         }
     }
 }
@@ -27,6 +27,7 @@ function whileContinue(){
     while(i<=10){
         i++;
         continue;
+        // continue문 아래에 있는 실행해야 하는 문장들을 건너 뛰고, 다음 반복을 시작한다. 
 
         document.write(i + '<br>');
     }
