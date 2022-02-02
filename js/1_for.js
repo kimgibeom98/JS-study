@@ -34,7 +34,3 @@ function nameodd(){
         }
     }
 }
-// *exp.5 지금까지 배웠던 JS를 배열을 활용해 출력해보자.
-function array(){
-    
-}
