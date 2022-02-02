@@ -34,3 +34,80 @@ function nameodd(){
         }
     }
 }
+
+// *exp.7 continue
+
+function forContinue(){
+    // let i = 0
+    for ( let i = 0; i <= 10; i++){
+        continue;
+        document.write(i + '<br>');
+    }
+    document.write('최종 i = ' + i + '<br>');
+}
+
+function runcontinue(){
+    let output = 0;
+    for(i = 0; i <= 10; i++){
+        if(i % 2 == 1){
+            continue;
+        }
+        output += i
+        alert(output);
+    }
+}
+
+// ! 다중 for
+
+// *exp.1 반절 피라미드
+function halfPyramid(){
+    for(let i = 1; i <= 10; i++){
+        for(let j = 1; j <= i; j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+}
+
+// *exp.2 역반절 피라미드
+function reverseHalfPyramid(){
+    for(let i = 10; i >= 1; i--){
+        for(let j = 1; j <= i; j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+}
+
+// *exp.2 피라미드
+function Pyramid(){
+    // let star = '*';
+    for(let i = 1; i <= 10; i++){
+        for(let j = 10; j > i; j--){
+            document.write('&nbsp');
+        }
+        for(let h = 1; h <= i; h++){
+            document.write('*');
+        }
+        for(let star = 1; star < i; star++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+}
+
+// *exp.2 역피라미드
+function reverspyramid(){
+    for(let i = 10; i >= 1; i--){
+        for(let j = 10; j > i; j--){
+            document.write('&nbsp');
+        }
+        for(let h = 1; h < i; h++){
+            document.write('*');
+        }
+        for(let star = 1; star <= i; star++ ){
+            document.write('*');
+        }
+        document.write('<br>')
+    }
+}

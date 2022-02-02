@@ -7,3 +7,13 @@ function array(){
         document.write(num + '.'+  data[i] + '<br>');
     }
 }
+
+// *exp.6 역반복 배열
+function reversearray(){
+    let array = ['사과', '포도', '바나나', '망고'];
+    let num = array.length + 1;
+    for(i = array.length -1 ; i >= 0; i--){
+        num--;
+        document.write(num + '.' + array[i] + '<br>');
+    }
+}
