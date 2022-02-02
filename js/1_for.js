@@ -111,3 +111,24 @@ function reverspyramid(){
         document.write('<br>')
     }
 }
+
+//todo.1 구구단 숫자를 입력받아 출력하는 for문.
+function gugudan(){
+    let number = window.prompt('숫자를 입력하세요');
+    for(let i = 0; i < 10; i++){
+        let result = number*i;
+        document.write( number + 'x' + i + '=' + result +'<br>');
+    }
+}
+
+
+// todo.2 배열의 총 합을 구하기. var data = [10,20,30,40,50];
+
+function arrayodd(){
+    let data = [10,20,30,40,50];
+    let result = 0;
+    for(let i = 0; i < data.length; i++){
+        result += data[i];
+    }
+    document.write(result);
+}
