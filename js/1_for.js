@@ -144,6 +144,14 @@ function arrayodd(){
 // start부터 end까지 그리고 다시 초기값 start까지 줄어들면서 char을
 // 찍는 함수를 작성
 
+
+// 추가조건1. start가 0이하면 1로 셋팅, end가 start보다 작거나, end가 100 이상이면 "실패" 출력후 함수 종료
+
+// 추가조건2. 세번째 매개변수 char은 optional.
+// char가 undefined면 *을 기본값으로 사용
+
+
+// repeat 함수를 사용한 방식
 function solution(start, end, char){
     let result = ''
     let endreverse = end - 1;
@@ -158,3 +166,23 @@ function solution(start, end, char){
 }
 
 solution(3,5,'$');
+
+// substring 함수를 사용한 방식
+function solution(start, end, char){
+    let result = ''
+    for(let i = start; i <= end; i++){
+        result += char
+        console.log(result);
+    }
+
+    // let result2 = '';
+    for(let i = start; i <= end; i++){
+        // result += char.substring(1)
+        console.log(result.substring(i));
+    }
+    
+}
+
+solution(1,5,'$');
+
+
