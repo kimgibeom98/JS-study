@@ -144,6 +144,17 @@ function arrayodd(){
 // start부터 end까지 그리고 다시 초기값 start까지 줄어들면서 char을
 // 찍는 함수를 작성
 
-function solution(start, end, char) {
-
+function solution(start, end, char){
+    let result = ''
+    let endreverse = end - 1;
+    for(let i = start; i <= end; i++){
+        result = char.repeat(i)
+        document.write(result + '<br>');
+    }
+    for(let i = endreverse; i >= start; i--){
+        result = char.repeat(i)
+        document.write(result + '<br>');
+    }
 }
+
+solution(3,5,'$');
