@@ -132,3 +132,18 @@ function arrayodd(){
     }
     document.write(result);
 }
+
+// function solution(start, end, char) {
+
+// }
+
+// 첫번째 매개변수 start number와
+// 두번째 매개변수 end number
+// 세번째 매개변수 출력 문자 char를 받는 함수 solution을 작성
+
+// start부터 end까지 그리고 다시 초기값 start까지 줄어들면서 char을
+// 찍는 함수를 작성
+
+function solution(start, end, char) {
+
+}
