@@ -185,4 +185,9 @@ function solution(start, end, char){
 
 solution(1,5,'$');
 
+// 추가조건1. start가 0이하면 1로 셋팅, end가 start보다 작거나, end가 100 이상이면 "실패" 출력후 함수 종료
+
+// 추가조건2. 세번째 매개변수 char은 optional.
+// char가 undefined면 *을 기본값으로 사용
+
 
