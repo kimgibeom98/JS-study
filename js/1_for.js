@@ -190,4 +190,30 @@ solution(1,5,'$');
 // 추가조건2. 세번째 매개변수 char은 optional.
 // char가 undefined면 *을 기본값으로 사용
 
+function solution(start, end, char){
+
+    if((end < start || end > 100)){
+        console.log('실패');
+        return;
+    }
+    if(start < 0){
+        start = 1;
+    }
+    
+    if(char == undefined){
+        char = '*';
+    }
+
+    let result = ''
+    let endreverse = end - 1;
+    for(let i = start; i <= end; i++){
+        result = char.repeat(i)
+        console.log(result);
+    }
+    for(let i = endreverse; i >= start; i--){
+        
+        result = char.repeat(i)
+        console.log(result);
+    }
+}
 
