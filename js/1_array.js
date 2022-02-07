@@ -17,3 +17,11 @@ function reversearray(){
         document.write(num + '.' + array[i] + '<br>');
     }
 }
+
+// arr은 숫자배열
+// n은 숫자배열에 +해줄 값을 넘겨야함
+
+// solution 함수 자체는 
+// 첫번째 인자로 숫자배열을받고,
+// 두번째 인자로 숫자배열에 더해줄 값을 받으면된다
+// 그 후 결과를 return
