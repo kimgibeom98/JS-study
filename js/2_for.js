@@ -9,11 +9,17 @@
 
 
 
-// searchIndex(["a", "b", "c", "d"], "f")
+// searchIndex(["a", "b", "c", "d"], "c")
 // 내가 선택한 알파벳이 몇번째 인덱스값을 가지고 있는지 구해보자.
-function searchIndex(arr, char) {
-
-    return
+function searchIndex(arr,char) {
+    let data = arr;
+    for(let i in data){
+        if(data[i] === char){
+            console.log(i);
+            return;
+        }
+    } 
+    console.log(null);
   }
   
-  searchIndex(["a", "b", "c", "d"], "f")
+  searchIndex(["a", "b", "c", "d"],"e")
