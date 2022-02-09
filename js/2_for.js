@@ -15,11 +15,9 @@ function searchIndex(arr,char) {
     let data = arr;
     for(let i in data){
         if(data[i] === char){
-            console.log(i);
-            return;
+            return i;
         }
     } 
-    console.log(null);
-  }
-  
-  searchIndex(["a", "b", "c", "d"],"e")
+    return null;
+}
+  console.log(searchIndex(["a", "b", "c", "d"],"c"));
