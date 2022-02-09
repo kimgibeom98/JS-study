@@ -25,7 +25,7 @@ function reversearray(){
 // 첫번째 인자로 숫자배열을받고,
 // 두번째 인자로 숫자배열에 더해줄 값을 받으면된다
 // 그 후 결과를 return
-function solutuon(arr, n){
+function solutuon(arr, char){
     let data = arr;
     let char = [];
     for(let i of data){
