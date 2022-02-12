@@ -17,7 +17,7 @@ function solution(arr, fn){
 console.log(solution([1,2,3,4,5], data))
 
 
-// 배열이 3 이상만 나오는 함수를 작성
+// 배열이 3 이상만 나오는 함수를 작성 data함수에서 return 값을 boolean으로 받기
 function data(a){
     if(a >= 3){
         return a;
