@@ -24,9 +24,8 @@ function data(a){
 
 
 function solution(arr, fn){
-    let num = arr;
     const char = [];
-    for(let i  of num){
+    for(let i  of arr){
         if(fn(i)){
             char.push(i);
         }
@@ -36,4 +35,7 @@ function solution(arr, fn){
 
 
 document.write(solution([1,2,3,4,5], data))
+
+
+// 위에 진행했던 배열 문제를 filter함수와 map함수를 이용해서 코드를 간소화하기
 
