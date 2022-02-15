@@ -39,3 +39,11 @@ document.write(solution([1,2,3,4,5], data))
 
 // 위에 진행했던 배열 문제를 filter함수와 map함수를 이용해서 코드를 간소화하기
 
+// 1. map
+function solution2(arr){
+    const char = arr.map(a => a * 3);
+    return char;
+}
+
+
+document.write(solution2([1,2,3,4,5]))
