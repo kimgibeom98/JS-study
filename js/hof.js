@@ -47,3 +47,18 @@ function solution2(arr){
 
 
 document.write(solution2([1,2,3,4,5]))
+
+// 2. filter
+function solution2(arr){
+    const char = arr.filter(a => a >= 3);
+    return char;
+}
+
+
+document.write(solution2([1,2,3,4,5]))
+
+// filter 라는 함수는 조건문을 만족한 요소들을 반환함,
+// map은 골백함수가 적용된 새 요소,
+
+// map은 콜백함수가 적용된 새로운 요소를 저장함.
+// filter는 조건문을 만족하는 요소들을 반환하는 함수
