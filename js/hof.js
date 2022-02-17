@@ -73,3 +73,21 @@ document.write(solution2([1,2,3,4,5]))
 // exp.4 solution([1,2,3,4,5], 함수1, 함수2)
 // 함수1에는 map을 이용한 연산함수
 // 함수2에는 filter를 이용한 조건함수를 넣어라
+
+// 함수1..
+function mapeven(a){
+    return a.map(x => x * 3);
+}
+
+// 함수2..
+function filtereven(b){
+    return b.filter(y => y >= 9)
+}
+
+function solution(arr, fn, char){
+    return char((fn(arr)));
+}
+
+document.write(solution([1,2,3,4,5], mapeven, filtereven));
+
+// exp.5  배열중 없는 0~9까지 없는 숫자를 찾아서 더하는 함수를 만들어라.
