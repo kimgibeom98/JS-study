@@ -16,7 +16,7 @@
     
     */
 
-    // *case.1 현재시간이 오후인가 오전인가.
+    // *ex.1 현재시간이 오후인가 오전인가.
     function amORpm(){
         var date = new Date();
         var hour = date.getHours();
@@ -28,7 +28,7 @@
         }
     }
 
-    //?case_2 말일인가 아닌가
+    //?ex_2 말일인가 아닌가
     function lastDay(){
         var date = new Date();
         var day = date.getDay();
@@ -40,7 +40,7 @@
         }
     }
 
-    //?case_3 아침?점심?저녁?
+    //?ex_3 아침?점심?저녁?
     function mealTime(){
         var date = new Date();
         var hour = date.getHours();
@@ -54,7 +54,7 @@
         }
     }
 
-    // * exp.1 숫자판별
+    // * ex.4 숫자판별
     function numbJudgment(){
         var numb = prompt('숫자를입력해봐','양,음수상관없음');
         if(numb > 0){
@@ -67,7 +67,7 @@
         }
     }
 
-    // todo.1 홀수,짝수 판별
+    // ex.5 홀수,짝수 판별
     function oddOrEven(){
         var numb = prompt('숫자를 입력하세요.','홀,짝 구분가능함');
 
@@ -80,7 +80,7 @@
             alert('숫자가아닙니다.');
         }
     }
-    // *exp.3 다음 세과목의 점수를 입력받고 평균을 구한 상, 중, 하 를출력.
+    // *ex.6 다음 세과목의 점수를 입력받고 평균을 구한 상, 중, 하 를출력.
     function avgScore2(){
         var koreanScore= prompt(' 국어점수를 입력하시오'); // ? data type = 문자형
         var englishScore= prompt(' 영어점수를 입력하시오');
@@ -97,7 +97,7 @@
        }
     }
 
-    // todo.2 사용자 ID(Mark)를 입력받아 맞다면 승인 메시지(승인합니다.) 출력.
+    // ex.7 사용자 ID(Mark)를 입력받아 맞다면 승인 메시지(승인합니다.) 출력.
     // ? 틀리다면 '잘못된 ID입니다.' 출력.
     function userIDCheck(){
         // ? 선언 및 입력부
@@ -115,7 +115,7 @@
             // ? recall
         }
     }
-    //todo.5 사용자 id "gibeom" 과 password"1234"를 입력받고 둘다 맞을 경우에만 승인 메시지 출력. 
+    //ex.8 사용자 id "gibeom" 과 password"1234"를 입력받고 둘다 맞을 경우에만 승인 메시지 출력. 
     function userInfoCheck(){
         var userID = window.prompt('사용자의 아이디');
         var userPW = window.prompt('사용자의 패스워드');
@@ -125,15 +125,15 @@
             alert('ID 혹은 Password가 틀렸습니다.');
         }
     }
-    //!tune.4 간소화(조건부연산자)
+    //ex.9 간소화(조건부연산자)
     function userInfoCheck1(){
         var userID = window.prompt('사용자의 아이디');
         var userPW = window.prompt('사용자의 패스워드');
         (userID == "gibeom" && userPW == "1234")? alert("gibeom님으로 확인 되었습니다.") : alert("ID 혹은 Password가 틀렸습니다.");
     }
 
-    //todo.6 사용자 id "mark"와 password"1234"의 정보가 틀릴 경우 틀린 정보에
-    //todo.  대한 오류 메시지 출력.
+    //ex.10 사용자 id "mark"와 password"1234"의 정보가 틀릴 경우 틀린 정보에
+    //  대한 오류 메시지 출력.
     function userInfoCheck2(){
         // ? 선언 및 입력부
        var userID = window.prompt("사용자의 아이디");
@@ -157,7 +157,7 @@
     }
 
 
-    //todo hw.1 각 수를 입력 받아 해당하는 조건의 메시지를 출력하라.
+    //ex11. 각 수를 입력 받아 해당하는 조건의 메시지를 출력하라.
     //? 1일 경우 "1등 10억", 2일 경우 "2등 5천만원", 3일 경우 "3등 300만원", 그외 수일 경우 "낙첨되었습니다."
     function lotto(){
         var lottoinput = window.prompt('숫자를 입력하세요');
@@ -174,7 +174,7 @@
 
 
 
-    //todo hw.2 다음 코드를 간소화 시키시오.
+    //ex.12 다음 코드를 간소화 시키시오.
     function btnMouseEx(){
         var clickBtn = window.prompt("누르실 마우스 버튼을 입력하세요 (왼쪽,오른쪽,가운데)");
 

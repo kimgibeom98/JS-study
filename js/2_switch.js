@@ -3,7 +3,7 @@
     * switch는 딱딱 떨어지는 값의 조건을 비교할때 사용한다.
     * ( >,<,>=,<=,!= 와 같은 연산자를 사용 안했을 경우에만)
 */
-// 홀짝을 switch문으로 변경
+// ex.2 홀짝을 switch문으로 변경
 function switchGrammar(){
     var input = Number(window.prompt('숫자를 입력하세요.'));
     switch(input % 2){
@@ -19,7 +19,7 @@ function switchGrammar(){
     }
 }
 
- // *exp.2 lotto과제를 switch로 변경
+ // *exp.3 lotto과제를 switch로 변경
  function lotto(){
     var numbValue = window.prompt('입력하실번호는?');
 
@@ -39,7 +39,7 @@ function switchGrammar(){
     }
 }
 
-//todo.1 switch 문을 이용한 계산기
+//ex.4 switch 문을 이용한 계산기
 //? 첫번째 숫자 와 연산자 와 두번째 숫자를 입력받아 계산해주는 계산기
 function calculator(){
     var firstnumber = window.prompt('첫번째 숫자를 입력해주세요.');
