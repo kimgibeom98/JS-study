@@ -39,5 +39,7 @@ function solutuon(arr, char){
 // ex4. solution함수는 숫자배열을 받아서 값이 제일 큰 순서대로 문자열로  return해라 ex) 9,1,0,2 0 -> "9210"
 
 function solution(numbers){
-
+    
 }
+
+solution
