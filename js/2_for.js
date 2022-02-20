@@ -65,12 +65,7 @@
     
 //     // forin
 //     // forof
-// ```
-
-
-
-
-
+// 
 // searchIndex(["a", "b", "c", "d"], "c")
 // 내가 선택한 알파벳이 몇번째 인덱스값을 가지고 있는지 구해보자.
 function searchIndex(arr,char) {
