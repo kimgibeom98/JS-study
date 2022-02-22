@@ -35,15 +35,8 @@ function solutuon(arr, char){
     return char;
 }
 
+//ex4. 1. 인자로 받은 arr을 전부 곱해서 return
+// function solution1(arr) {
 
-// ex4. solution함수는 숫자배열을 받아서 값이 제일 큰 순서대로 문자열로  return해라 ex) 9,1,0,2 0 -> "9210"
-// 조건 힌트
-// 1. n으로 시작하는수 우선(9>8>7 …)
-// 2. 자릿수 짧은게 우선 (9> 99>990>9999)
-// 3. 자릴수가 같으면 더 큰수가 우선
-
-function solution(numbers){
-    
-}
-
-solution
+// }
+// solution1([1, 2, 3, 4, 5, 7, 8])
