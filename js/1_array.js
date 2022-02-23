@@ -36,7 +36,13 @@ function solutuon(arr, char){
 }
 
 //ex4. 1. 인자로 받은 arr을 전부 곱해서 return
-// function solution1(arr) {
 
-// }
-// solution1([1, 2, 3, 4, 5, 7, 8])
+function solution1(arr) {
+    const total = arr.reduce((a,b) => a * b);
+
+    return total;
+
+}
+
+console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
+
