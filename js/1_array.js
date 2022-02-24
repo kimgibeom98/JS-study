@@ -35,7 +35,7 @@ function solutuon(arr, char){
     return char;
 }
 
-//ex4. 1. 인자로 받은 arr을 전부 곱해서 return
+//ex4. 인자로 받은 arr을 전부 곱해서 return
 
 function solution1(arr) {
     const total = arr.reduce((a,b) => a * b);
@@ -46,3 +46,15 @@ function solution1(arr) {
 
 console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
 
+
+//ex5. 1. arr element중 3이상만 필터링해서 return
+    // 2. reduce 안에서 중복된 수는 없애기
+
+    function solution2(arr) {
+        const set  = arr.filter(a => a >= 3)
+        
+        const total = set.reduce((a,b) => a.includes(b) ? a: [...a,b],[])
+        return total
+        
+    }
+    console.log(solution2([3, 5, 7, 3, 5, 6, 8]));
