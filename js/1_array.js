@@ -58,3 +58,20 @@ console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
         
     }
     console.log(solution2([3, 5, 7, 3, 5, 6, 8]));
+
+
+//ex6. 오브젝트 이름별 점수의 합계를 리턴해라. 
+    // 3. function solution3(arr) {
+    //     return [
+    //         { name: "김민규", score: 5 }
+    //         { name: "최기영", score: 1 },
+    //     ]
+    // }
+    // solution3([
+    //     { name: "김민규", score: 1 },
+    //     { name: "김민규", score: 6 },
+    //     { name: "김민규", score: -2 },
+    //     { name: "최기영", score: 1 },
+    // ])
+
+
