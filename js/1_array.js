@@ -38,10 +38,7 @@ function solutuon(arr, char){
 //ex4. 인자로 받은 arr을 전부 곱해서 return
 
 function solution1(arr) {
-    const total = arr.reduce((a,b) => a * b);
-
-    return total;
-
+    return arr.reduce((a,b) => a * b);
 }
 
 console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
@@ -58,6 +55,21 @@ console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
         
     }
     console.log(solution2([3, 5, 7, 3, 5, 6, 8]));
+
+    // 위에 소스는 메모리공간 활용에 효율적이지 않아 아래소스로 변경
+
+    function solution3(arr) {
+        return arr
+        .filter((a) =>  a >= 3)
+        .reduce((acc, cur) => {
+            if(!acc.includes(cur)){
+                acc.push(cur);
+            }
+            return acc;
+        }, []);
+    }
+    
+      console.log(solution3([3, 5, 7, 3, 5, 6, 8]));
 
 
 //ex6. 오브젝트 이름별 점수의 합계를 리턴해라. 
