@@ -73,17 +73,24 @@ console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
 
 
 //ex6. 오브젝트 이름별 점수의 합계를 리턴해라. 
-    // 3. function solution3(arr) {
-    //     return [
-    //         { name: "김민규", score: 5 }
-    //         { name: "최기영", score: 1 },
-    //     ]
-    // }
-    // solution3([
-    //     { name: "김민규", score: 1 },
-    //     { name: "김민규", score: 6 },
-    //     { name: "김민규", score: -2 },
-    //     { name: "최기영", score: 1 },
-    // ])
+function solution3(arr) {
+    const scorenum = arr.reduce((acc, cur) => {
+      const name = cur.name;
+      const targetIndex = acc.findIndex((i) => i.name === name);
+      if (targetIndex >= 0) {
+        acc[targetIndex] = { name, score: acc[targetIndex].score + cur.score };
+      } else {
+        acc.push({ name, score: cur.score  });
+      }
+      return acc;
+    }, []);
+    return scorenum;
+  }
+    console.log(solution3([
+        { name: "김민규", score: 1 },
+        { name: "김민규", score: 6 },
+        { name: "김민규", score: -2 },
+        { name: "최기영", score: 1 },
+    ]));
 
 
