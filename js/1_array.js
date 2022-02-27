@@ -129,3 +129,17 @@ function solution3(arr) {
         return total;
     }
       console.log(solution(4));
+
+    //   위에 코드를 배열로
+
+    function solution(num) {
+        let data = ['a','b','c'];
+        let total = []
+    
+        for(let i = 0; i < num; i ++ ){
+            total.push(data[i%3]) 
+        }
+        
+        return total.join("");
+    }
+      console.log(solution(4));
