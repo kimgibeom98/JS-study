@@ -96,3 +96,22 @@ function solution3(arr) {
 
     // ex7 입력받은 숫자만큼 'abc'를 출력해라.
 
+
+    function solution(num) {
+        let data = 'abc';
+        let total = ''
+    
+        for(let i = 0; i < num; i ++ ){
+    
+            if(i % 3 === 0){
+                total += data[0];
+            }else if(i % 3 === 1){
+                total += data[1];
+            }else if(i % 3 === 2) {
+                total += data[2];
+            }
+            
+        }
+        return total
+    }
+      console.log(solution(4));
