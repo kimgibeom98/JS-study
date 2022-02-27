@@ -115,3 +115,17 @@ function solution3(arr) {
         return total
     }
       console.log(solution(4));
+
+    //   위에코드를 간소화
+
+    function solution(num) {
+        let data = 'abc';
+        let total = ''
+    
+        for(let i = 0; i < num; i ++ ){
+            total += data[i%3]
+        }
+          
+        return total;
+    }
+      console.log(solution(4));
