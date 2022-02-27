@@ -143,3 +143,20 @@ function solution3(arr) {
         return total.join("");
     }
       console.log(solution(4));
+
+
+// 객체안에 함수 담기
+function objeven(){
+    let obj = {
+        'list' : {'gibeom' : 100, 'minju' : 80, 'teahun' : 90},
+        'show' : function(){
+            for(let key in this.list){
+                console.log(key, this.list[key]);
+            }
+            // console.log(this.list);  obj의 객체 list를 나타냄
+        }   
+    }
+    obj.show();
+
+}
+objeven();  
