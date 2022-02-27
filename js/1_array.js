@@ -94,3 +94,5 @@ function solution3(arr) {
     ]));
 
 
+    // ex7 입력받은 숫자만큼 'abc'를 출력해라.
+
