@@ -110,3 +110,9 @@
 //   console.log(searchIndex(["a", "b", "c", "d"],"c"));
 
 
+function dd(){
+    if(!undefined){
+        alert("test");
+    }
+}
+console.log(dd());
