@@ -1,5 +1,4 @@
 
-
 /*
     ?for
     *특정구문을 정해진 횟수 만큼 반복해야 할 경우 사용하는 반복문.
@@ -121,18 +120,6 @@ function gugudan(){
         let result = number*i;
         document.write( number + 'x' + i + '=' + result +'<br>');
     }
-}
-
-
-// todo.2 배열의 총 합을 구하기. var data = [10,20,30,40,50];
-
-function arrayodd(){
-    let data = [10,20,30,40,50];
-    let result = 0;
-    for(let i = 0; i < data.length; i++){
-        result += data[i];
-    }
-    document.write(result);
 }
 
 // function solution(start, end, char) {

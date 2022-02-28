@@ -1,3 +1,15 @@
+// todo.1 배열의 총 합을 구하기. var data = [10,20,30,40,50];
+
+function arrayodd(){
+    let data = [10,20,30,40,50];
+    let result = 0;
+    for(let i = 0; i < data.length; i++){
+        result += data[i];
+    }
+    document.write(result);
+}
+
+
 // *exp.1 지금까지 배웠던 JS를 배열을 활용해 출력해보자.
 function array(){
     let data = ['if문', 'switch문', 'while문', 'for문'];
@@ -20,7 +32,6 @@ function reversearray(){
 
 // ex3. arr은 숫자배열
 // n은 숫자배열에 +해줄 값을 넘겨야함
-
 // solution 함수 자체는 
 // 첫번째 인자로 숫자배열을받고,
 // 두번째 인자로 숫자배열에 더해줄 값을 받으면된다
