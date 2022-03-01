@@ -19,7 +19,6 @@ function array(){
         document.write(num + '.'+  data[i] + '<br>');
     }
 }
-
 // *exp.2 역반복 배열
 function reversearray(){
     let array = ['사과', '포도', '바나나', '망고'];
@@ -29,6 +28,7 @@ function reversearray(){
         document.write(num + '.' + array[i] + '<br>');
     }
 }
+
 
 // ex3. arr은 숫자배열
 // n은 숫자배열에 +해줄 값을 넘겨야함
@@ -48,28 +48,28 @@ function solutuon(arr, char){
 
 //ex4. 인자로 받은 arr을 전부 곱해서 return
 
-function solution1(arr) {
+function solutionex4(arr) {
     return arr.reduce((a,b) => a * b);
 }
 
-console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
+console.log(solutionex4([1, 2, 3, 4, 5, 7, 8]));
 
 
 //ex5. 1. arr element중 3이상만 필터링해서 return
     // 2. reduce 안에서 중복된 수는 없애기
 
-    function solution2(arr) {
+    function solutionex5(arr) {
         const set  = arr.filter(a => a >= 3)
         
         const total = set.reduce((a,b) => a.includes(b) ? a: [...a,b],[])
         return total
         
     }
-    console.log(solution2([3, 5, 7, 3, 5, 6, 8]));
+    console.log(solutionex5([3, 5, 7, 3, 5, 6, 8]));
 
     // 위에 소스는 메모리공간 활용에 효율적이지 않아 아래소스로 변경
 
-    function solution3(arr) {
+    function solutionex5T(arr) {
         return arr
         .filter((a) =>  a >= 3)
         .reduce((acc, cur) => {
@@ -80,11 +80,11 @@ console.log(solution1([1, 2, 3, 4, 5, 7, 8]));
         }, []);
     }
     
-      console.log(solution3([3, 5, 7, 3, 5, 6, 8]));
+    console.log(solutionex5T([3, 5, 7, 3, 5, 6, 8]));
 
 
 //ex6. 오브젝트 이름별 점수의 합계를 리턴해라. 
-function solution3(arr) {
+function solutionex6(arr) {
     const scorenum = arr.reduce((acc, cur) => {
       const name = cur.name;
       const targetIndex = acc.findIndex((i) => i.name === name);
@@ -97,7 +97,7 @@ function solution3(arr) {
     }, []);
     return scorenum;
   }
-    console.log(solution3([
+    console.log(solutionex6([
         { name: "김민규", score: 1 },
         { name: "김민규", score: 6 },
         { name: "김민규", score: -2 },
@@ -105,10 +105,8 @@ function solution3(arr) {
     ]));
 
 
-    // ex7 입력받은 숫자만큼 'abc'를 출력해라.
-
-
-    function solution(num) {
+// ex7 입력받은 숫자만큼 'abc'를 출력해라.
+    function solutionex7(num) {
         let data = 'abc';
         let total = ''
     
@@ -125,11 +123,11 @@ function solution3(arr) {
         }
         return total
     }
-      console.log(solution(4));
+      console.log(solutionex7(4));
 
     //   위에코드를 간소화
 
-    function solution(num) {
+    function solutionex7T(num) {
         let data = 'abc';
         let total = ''
     
@@ -139,11 +137,11 @@ function solution3(arr) {
           
         return total;
     }
-      console.log(solution(4));
+      console.log(solutionex7T(4));
 
     //   위에 코드를 배열로
 
-    function solution(num) {
+    function solutionex7T2(num) {
         let data = ['a','b','c'];
         let total = []
     
@@ -153,7 +151,7 @@ function solution3(arr) {
         
         return total.join("");
     }
-      console.log(solution(4));
+      console.log(solutionex7T2(4));
 
 
 // 객체안에 함수 담기
@@ -170,4 +168,12 @@ function objeven(){
     obj.show();
 
 }
-objeven();  
+objeven();
+
+ //ex.8 배열 요소의 값을 받으면 그 요소를 배열에서 찾아서 인덱스로 반환하는 함수를 작성
+
+ function test9808(){
+    let a = window.prompt("테스트 입니다.")
+    return a;
+ }
+ test9808();
