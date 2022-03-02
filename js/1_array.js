@@ -44,7 +44,7 @@ function solution(arr){
     }
     return total;
 }
-document.write(solution([1,2,3,4,5]));
+console.log(solution([1,2,3,4,5]));
 
 //ex4. 인자로 받은 arr을 전부 곱해서 return
 
@@ -171,3 +171,9 @@ function objeven(){
 objeven();
 
  //ex.8 배열 요소의 값을 받으면 그 요소를 배열에서 찾아서 인덱스로 반환하는 함수를 작성
+
+function findobj(value){
+    const obj = ["Hi","Hellow","true","false","bye"];
+    document.write(obj + "배열에서" + value + "는" + obj.indexOf(value) + "번 인덱스에 있습니다." );
+}
+findobj("Hellow");

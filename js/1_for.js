@@ -26,6 +26,7 @@ function namePrint(){
     }
 }
 
+
 // todo.1 이름을 500번찍되, 홀수만 나와야돼.(1,3,5,7,9,11......)
 function nameodd(){
     let name = 'gibeom';
