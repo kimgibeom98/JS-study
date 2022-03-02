@@ -36,15 +36,15 @@ function reversearray(){
 // 첫번째 인자로 숫자배열을받고,
 // 두번째 인자로 숫자배열에 더해줄 값을 받으면된다
 // 그 후 결과를 return
-function solutuon(arr, char){
+function solution(arr){
     let data = arr;
-    let char = [];
+    let total = [];
     for(let i of data){
-        char.push(i + 3);
+        total.push(i + 3);
     }
-    console.log(char);
-    return char;
+    return total;
 }
+document.write(solution([1,2,3,4,5]));
 
 //ex4. 인자로 받은 arr을 전부 곱해서 return
 
@@ -171,9 +171,3 @@ function objeven(){
 objeven();
 
  //ex.8 배열 요소의 값을 받으면 그 요소를 배열에서 찾아서 인덱스로 반환하는 함수를 작성
-
- function test9808(){
-    let a = window.prompt("테스트 입니다.")
-    return a;
- }
- test9808();
