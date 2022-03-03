@@ -11,8 +11,23 @@
 // document.write("안녕하세요","<br>");
 
 function hello(){
-    var comment = '안녕하세요';
-    for (var i = 0; i < 3; i++){
+    let comment = '안녕하세요';
+    for (let i = 0; i < 3; i++){
         document.write(comment,'<br>');
     }
 }
+
+
+// 정적 유효범위
+let i = 5;
+
+function a(){
+    let i = 10;
+    b();
+}
+
+function b(){
+    document.write(i)
+}
+a();
+// 해당함수를 실행시 5가 찍히게된다. 사용될때가 아닌 정의될때에 전역변수가 사용된다. - 정적유효범위 
