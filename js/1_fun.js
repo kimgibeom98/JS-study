@@ -38,3 +38,21 @@ a = {
 
     }
 }; 
+
+// *exp.2 무한루프를 돌며 숫자를 입력받고 입력받은 수의 합을 화면에 출력하는 함수를 만들어보자.
+// ! 단 입력값이 0이면 즉시 실행을 멈추게 한다.
+function whileplus(){
+    
+    let result = 0;
+    while(true){
+        let num = Number(window.prompt('숫자를 입력하세요.'));
+        if(num === 0){
+            alert("숫자 0. 중지");
+            break;
+        }
+        result += num;
+    }
+    document.write("최종합계는 : " + result);
+}
+
+whileplus();
