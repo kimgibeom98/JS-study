@@ -55,4 +55,22 @@ function whileplus(){
     document.write("최종합계는 : " + result);
 }
 
-whileplus();
+// whileplus();
+
+// 값으로써의 함수와 콜백
+// 함수를 배열에 담아 보았다
+function prfun(){
+    let input = 1;
+    let process = [
+        function(input){return input + 10;},
+        function(input){return input * input},
+        function(input){return input / 2}
+    ];
+    for(let i = 0; i < process.length; i++){
+         input = process[i](input);
+    }
+    alert(input);
+}
+prfun();
+
+//  변수,매개변수,리턴값 등 다양한 용도에 사용하는 함수를  first-class-citizen,object 라고 부른다.
