@@ -177,3 +177,14 @@ function findobj(value){
 }
 findobj("Hellow");
 
+
+// sort함수를 이용한 배열의 작은수 부터 큰수 순서로 정렬
+function sorteven(){
+    let number = [20,8,9,10,7,6,2,4,3,5,1]
+    let sortfunc = function(a,b){
+        return a - b
+    }
+    console.log(number.sort(sortfunc)); //여기서 sortfunc 는 콜백함수이다.  
+    // - sort라는 오리지널 함수의 동작방법을 값을 전달하는것을 통해서 완전히 바꿀수 있는걸 콜백 이라 한다.
+}
+sorteven();
