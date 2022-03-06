@@ -74,3 +74,14 @@ function prfun(){
 prfun();
 
 //  변수,매개변수,리턴값 등 다양한 용도에 사용하는 함수를  first-class-citizen,object 라고 부른다.
+
+// 클로저
+function outter(){
+    let title = 'hellow';
+    function inner(){
+        alert(title);
+    }
+    inner();
+}
+
+// 위에 소스를 실행시 inner라는 내부함수가 outter라는 외부함수의 지역변수에 접근할 수 있다 이러한것을 클로저라 한다.
