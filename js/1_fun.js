@@ -88,8 +88,8 @@ function outter(){
 
 // 클로저 실용예제.
 function factory_movie(title){
-    return{
-        get_title : function(){
+    return {
+        get_title : function (){
             return title;
         },
         set_title : function(_title){
@@ -97,10 +97,16 @@ function factory_movie(title){
         }
     }
 }
-let ghost = factory_movie('ghost in the shell');
-let matrix = factory_movie('matrix');
-ghost.set_title('공각기동대'); // ghost의 get_title도 '공각기동대' 로 변경됨 , 변수 matrix에는 아무 지장없음.
+ghost = factory_movie('Ghost in the shell');
+matrix = factory_movie('Matrix');
+ 
+alert(ghost.get_title());  // 'Ghost in the shell' 출력
+alert(matrix.get_title()); // 'Matrix' 출력
+ 
+ghost.set_title('공각기동대');  // ghost의 get_title도 '공각기동대' 로 변경됨 , 변수 matrix에는 아무 지장없음.
+ 
+alert(ghost.get_title()); // '공각기동대' 출력
+alert(matrix.get_title()); // 'Matrix' 출력
 
-console.log(ghost.get_title());
 
  
