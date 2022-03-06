@@ -75,7 +75,7 @@ prfun();
 
 //  변수,매개변수,리턴값 등 다양한 용도에 사용하는 함수를  first-class-citizen,object 라고 부른다.
 
-// 클로저
+// 클로저 - 자바스크립트가 프라이빗한 변수를 사용할 수 있도록 하는 좋은 메카니즘.(아래 클로저 실용예제 참고.)
 function outter(){
     let title = 'hellow';
     function inner(){
@@ -85,3 +85,22 @@ function outter(){
 }
 
 // 위에 소스를 실행시 inner라는 내부함수가 outter라는 외부함수의 지역변수에 접근할 수 있다 이러한것을 클로저라 한다.
+
+// 클로저 실용예제.
+function factory_movie(title){
+    return{
+        get_title : function(){
+            return title;
+        },
+        set_title : function(_title){
+            title = _title
+        }
+    }
+}
+let ghost = factory_movie('ghost in the shell');
+let matrix = factory_movie('matrix');
+ghost.set_title('공각기동대'); // ghost의 get_title도 '공각기동대' 로 변경됨 , 변수 matrix에는 아무 지장없음.
+
+console.log(ghost.get_title());
+
+ 
