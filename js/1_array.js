@@ -201,3 +201,29 @@ function sum(){
 }
 document.write('result : ' + sum(1,2,3,4));
 sum();
+
+// arguments와 매개변수의 비교
+
+function zero(){
+    console.log(
+        'zero.length', zero.length,
+        'arguments', arguments.length
+    );
+}
+zero(); // zero.length 0 arguments 0 
+
+function one(arg1){
+    console.log(
+        'one.length', one.length,
+        'arguments', arguments.length
+    );
+}
+one('val1', 'val2');  // one.length 1 arguments 2 
+
+function two(arg1, arg2){
+    console.log(
+        'two.length', two.length,
+        'arguments', arguments.length
+    );
+}
+two('val1');  // two.length 2 arguments 1
