@@ -228,8 +228,19 @@ function two(arg1, arg2){
 }
 two('val1');  // two.length 2 arguments 1
 
-// aplly
 
+// aplly
+function func(arg1, arg2){
+    return arg1 + arg2;
+}
+func(1,2); // 실행시 3이 출력이된다. 아래는 aplly를 이용한 방법
+
+function func2(arg1, arg2){
+    return arg1 + arg2;
+}
+func2.apply(null, [1,2]); // 실행시 3이 출력이된다. aplly사용
+
+// 실제 aplly를 사용한 예제
 o1 = {val1:1, val2:2, val3:3}
 o2 = {v1:10, v2:50, v3:100, v4:25}
 function sum(){
