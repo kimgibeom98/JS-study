@@ -37,7 +37,7 @@ function nameodd(){
     }
 }
 
-// *exp.7 continue
+// *exp.2 continue
 
 function forContinue(){
     // let i = 0
@@ -61,7 +61,7 @@ function runcontinue(){
 
 // ! 다중 for
 
-// *exp.1 반절 피라미드
+// *exp.3 반절 피라미드
 function halfPyramid(){
     for(let i = 1; i <= 10; i++){
         for(let j = 1; j <= i; j++){
@@ -71,7 +71,7 @@ function halfPyramid(){
     }
 }
 
-// *exp.2 역반절 피라미드
+// *exp.4 역반절 피라미드
 function reverseHalfPyramid(){
     for(let i = 10; i >= 1; i--){
         for(let j = 1; j <= i; j++){
@@ -81,7 +81,7 @@ function reverseHalfPyramid(){
     }
 }
 
-// *exp.2 피라미드
+// *exp.5 피라미드
 function Pyramid(){
     // let star = '*';
     for(let i = 1; i <= 10; i++){
@@ -98,7 +98,7 @@ function Pyramid(){
     }
 }
 
-// *exp.2 역피라미드
+// *exp.6 역피라미드
 function reverspyramid(){
     for(let i = 10; i >= 1; i--){
         for(let j = 10; j > i; j--){
@@ -127,7 +127,7 @@ function gugudan(){
 
 // }
 
-// 첫번째 매개변수 start number와
+//ex7. 첫번째 매개변수 start number와
 // 두번째 매개변수 end number
 // 세번째 매개변수 출력 문자 char를 받는 함수 solution을 작성
 
@@ -206,4 +206,20 @@ function solution(start, end, char){
         console.log(result);
     }
 }
+
+// ex8.직사각형 별찍기
+// 두 개의 정수 n과 m이 주어진다
+// 별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보자.
+function starsq(a,b){
+    let star = "*";
+    for(let i = 0; i < b; i++){
+        let num = '';
+        for(let j= 0; j < a; j++){
+             num += star;
+        }
+        console.log(num)
+    }
+}
+starsq(5,3);
+
 
