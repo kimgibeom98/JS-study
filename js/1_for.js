@@ -207,19 +207,4 @@ function solution(start, end, char){
     }
 }
 
-// ex8.직사각형 별찍기
-// 두 개의 정수 n과 m이 주어진다
-// 별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보자.
-function starsq(a,b){
-    let star = "*";
-    for(let i = 0; i < b; i++){
-        let num = '';
-        for(let j= 0; j < a; j++){
-             num += star;
-        }
-        console.log(num)
-    }
-}
-starsq(5,3);
-
 
