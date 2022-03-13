@@ -49,3 +49,27 @@ document.write(pnew1.introduce() + '<br>');
 let pnew2 = new personenew02('leezche');
 document.write(pnew2.introduce());
 
+
+// 객제치향 - this
+function func(){
+    if(window === this){
+        document.write("window === this");
+    }
+}
+func();
+
+// 위에 함수를 window.func(); 으로 호출해도 정상적으로 출력된다. 
+// 이렇듯 모든 함수는 window가 포함되어있으나 생략이 가능하다. 여기서 window는 전역객체이다. 따라서 일반함수도 전역객체에 포함되어있기 때문에 메소드라고 볼 수 있다.
+
+// 메소드에서의 this
+let o = {
+    func : function(){
+        if(o === this){
+            document.write("o === this");
+        }
+    }
+}
+
+o.func();
+//this 는 메소드가 소속되어있는 객체를 가르킨다. 그렇기때문에 위에 코드에서는 변수o 가 this가 된다.
+
