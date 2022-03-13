@@ -17,3 +17,33 @@ var person = {
 document.write(person.introduce());
 
 // 만약 다른 사람의 이름을 담을 객체가 필요하다면 객체의 정의를 반복해야 할 것이다. 객체의 구조를 재활용할 수 있는 방법이 필요하다. 이 때 사용하는 것이 생성자다.
+
+
+// new 생성자
+function Person(){}
+var p1 = new Person();
+p1.name = 'egoing';
+p1.introduce = function(){
+    return 'My name is '+this.name; 
+}
+document.write(p1.introduce()+"<br />");
+ 
+var p2 = new Person();
+p2.name = 'leezche';
+p2.introduce = function(){
+    return 'My name is '+this.name; 
+}
+document.write(p2.introduce());
+
+// 위에 코드는 같은걸 반복하고있다. 이러한 반복을 줄이기위해 new 라는 생성자를 이용해 간결하게 표현하였다.
+function Person(name){
+    this.name = name;
+    this.introduce = function(){
+        return 'My name is '+this.name; 
+    }   
+}
+var p1 = new Person('egoing');
+document.write(p1.introduce()+"<br />");
+ 
+var p2 = new Person('leezche');
+document.write(p2.introduce());
