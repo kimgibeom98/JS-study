@@ -89,3 +89,23 @@ if(funcThis === newthis2){
     document.write('newthis2 <br />');
 }
 
+
+// apply와 this
+let a = {}
+let y = {}
+function funcapply(){
+    switch(this){
+        case a:
+            document.write('a<br />');
+            break;
+        case y:
+            document.write('y<br />');
+            break;
+        case window:
+            document.write('window<br />');
+            break;          
+    }
+}
+funcapply();
+funcapply.apply(a);
+funcapply.apply(y);
