@@ -112,6 +112,7 @@ funcapply.apply(y);
 
 
 //  상속의 사용법
+
 function Person02(name){
     this.name = name;
 }
@@ -124,6 +125,11 @@ function Programmer(name){
     this.name = name;
 }
 Programmer.prototype = new Person02();
+Programmer.prototype.coding = function(){
+    return "hello world";
+}
  
-var p1 = new Programmer('egoing');
-document.write(p1.introduce()+"<br />");
+var p01 = new Programmer('egoing');
+document.write(p01.introduce()+"<br />");
+document.write(p01.coding()+"<br />");
+
