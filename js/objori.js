@@ -109,3 +109,21 @@ function funcapply(){
 funcapply();
 funcapply.apply(a);
 funcapply.apply(y);
+
+
+//  상속의 사용법
+function Person02(name){
+    this.name = name;
+}
+Person02.prototype.name=null;
+Person02.prototype.introduce = function(){
+    return 'My name is '+this.name; 
+}
+ 
+function Programmer(name){
+    this.name = name;
+}
+Programmer.prototype = new Person02();
+ 
+var p1 = new Programmer('egoing');
+document.write(p1.introduce()+"<br />");
