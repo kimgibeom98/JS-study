@@ -133,3 +133,22 @@ var p01 = new Programmer('egoing');
 document.write(p01.introduce()+"<br />");
 document.write(p01.coding()+"<br />");
 
+
+// prototype chain
+function Ultra(){}
+Ultra.prototype.ultraProp = true;
+
+function Super(){}
+Super.prototype = new Ultra();
+
+function Sub(){}
+Sub.prototype = new Super();
+// Sub.prototype.ultraProp = 2;
+
+var t = new Sub();
+console.log(t.ultraProp);
+
+// 1. 객체 t에서 ultraProp를 찾는다.
+// 2. 없다면 Sub.prototype.ultraProp를 찾는다.
+// 3. 없다면 Super.prototype.ultraProp를 찾는다.
+// 4. 없다면 Ultra.prototype.ultraProp를 찾는다.
