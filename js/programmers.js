@@ -130,3 +130,36 @@ function solution08(n){
     return Number(answer.join(''));
 }
 solution08(118372);
+
+// 자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열 형태로 리턴해주세요. 예를들어 n이 12345이면 [5,4,3,2,1]을 리턴합니다.
+
+// 제한 조건
+// n은 10,000,000,000이하인 자연수입니다.
+function solution09(n) {
+    
+    var answer = (n + '').split('');
+    var result = [];
+    
+    for(let i = answer.length -1; i >= 0; i--){
+        result.push(Number(answer[i]))
+    }
+    console.log(result);
+    return result;
+}
+solution09(12345);
+
+// 자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution10 함수를 만들어 주세요.
+// 예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
+
+// 제한사항
+// N의 범위 : 100,000,000 이하의 자연수
+function solution10(n)
+{
+    var answer = (n + '').split('');
+    let result = 0;
+    for(let i = 0; i < answer.length; i++){
+        result += Number(answer[i]);
+    }
+    return result;
+}
+solution10(987);
