@@ -152,3 +152,21 @@ console.log(t.ultraProp);
 // 2. 없다면 Sub.prototype.ultraProp를 찾는다.
 // 3. 없다면 Super.prototype.ultraProp를 찾는다.
 // 4. 없다면 Ultra.prototype.ultraProp를 찾는다.
+
+
+// 배열의 확장
+var arrcountry = new Array('seoul','new york','ladarkh','pusan', 'Tsukuba');
+function getRandomValueFromArray(haystack){
+    var index = Math.floor(haystack.length*Math.random());
+    return haystack[index]; 
+}
+console.log(getRandomValueFromArray(arrcountry));
+
+// 위에 코드를 prototype을 이용해서 코딩
+var arrcountry2 = new Array('seoul','new york','ladarkh','pusan', 'Tsukuba');
+Array.prototype.random = function(){
+    var index = Math.floor(this.length*Math.random());
+    return this[index];
+}
+console.log(arrcountry2.random());
+
