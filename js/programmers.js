@@ -163,3 +163,62 @@ function solution10(n)
     return result;
 }
 solution10(987);
+
+// 정수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution11을 완성해주세요.
+
+// 제한 사항
+// n은 0 이상 3000이하인 정수입니다.
+function solution11(n) {
+    var answer = 0;
+    for(let i = 1; i <= n; i++){
+        if(n % i === 0){
+            answer += i
+        }
+    }
+    
+    return answer;
+}
+solution11(12);
+
+
+// 문자열 s를 숫자로 변환한 결과를 반환하는 함수, solution12를 완성하세요.
+
+// 제한 조건
+// s의 길이는 1 이상 5이하입니다.
+// s의 맨앞에는 부호(+, -)가 올 수 있습니다.
+// s는 부호와 숫자로만 이루어져있습니다.
+// s는 "0"으로 시작하지 않습니다.
+
+function solution12(s) {
+    var answer = Number(s);
+    
+    return answer;
+}
+solution12("1234");
+
+
+// 길이가 n이고, "수박수박수박수...."와 같은 패턴을 유지하는 문자열을 리턴하는 함수, solution13을 완성하세요. 예를들어 n이 4이면 "수박수박"을 리턴하고 3이라면 "수박수"를 리턴하면 됩니다.
+
+// 제한 조건
+// n은 길이 10,000이하인 자연수입니다.
+function solution13(n) {
+    var answer = '수박';
+    var result = "";
+    for(let i = 0; i < n; i++){
+        result += answer[i%2]
+    }
+    return result;
+}
+solution13(3);
+
+
+// String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, "김서방은 x에 있다"는 String을 반환하는 함수, solution14를 완성하세요. seoul에 "Kim"은 오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다.
+
+// 제한 사항
+// seoul은 길이 1 이상, 1000 이하인 배열입니다.
+// seoul의 원소는 길이 1 이상, 20 이하인 문자열입니다.
+// "Kim"은 반드시 seoul 안에 포함되어 있습니다.
+function solution14(seoul) {
+    return "김서방은 " + seoul.indexOf("Kim") + "에 있다";
+}
+solution14(["Jane","Kim"])
