@@ -170,3 +170,19 @@ Array.prototype.random = function(){
 }
 console.log(arrcountry2.random());
 
+
+
+// 오브젝트의 확장
+
+Object.prototype.contain = function(neddle) {
+    for(var name in this){
+        if(this[name] === neddle){
+            return true;
+        }
+    }
+    return false;
+}
+var b = {'name':'egoing', 'city':'seoul'}
+console.log(b.contain('egoing')); // true출력
+var j = ['egoing','leezche','grapittie'];
+console.log(j.contain('seoul')); // false출력
