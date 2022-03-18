@@ -186,3 +186,11 @@ var b = {'name':'egoing', 'city':'seoul'}
 console.log(b.contain('egoing')); // true출력
 var j = ['egoing','leezche','grapittie'];
 console.log(j.contain('seoul')); // false출력
+
+
+// 레퍼객체
+var str = 'coding';
+console.log(str.length);        // 6
+console.log(str.charAt(0));     // "C"
+// 문자열은 분명히 프로퍼티와 메소드가 있다.
+// 그렇다면 객체다. 그런데 왜 문자열이 객체가 아니라고 할까? 그것은 내부적으로 문자열이 원시 데이터 타입이고 문자열과 관련된 어떤 작업을 하려고 할 때 자바스크립트는 임시로 문자열 객체를 만들고 사용이 끝나면 제거하기 때문이다. 이러한 처리는 내부적으로 일어난다.
