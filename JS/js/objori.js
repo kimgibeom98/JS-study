@@ -194,3 +194,24 @@ console.log(str.length);        // 6
 console.log(str.charAt(0));     // "C"
 // 문자열은 분명히 프로퍼티와 메소드가 있다.
 // 그렇다면 객체다. 그런데 왜 문자열이 객체가 아니라고 할까? 그것은 내부적으로 문자열이 원시 데이터 타입이고 문자열과 관련된 어떤 작업을 하려고 할 때 자바스크립트는 임시로 문자열 객체를 만들고 사용이 끝나면 제거하기 때문이다. 이러한 처리는 내부적으로 일어난다.
+
+
+// 복제와 참조
+
+// 원시데이터 타입의 복제
+var atype = 1;
+var btype = atype;
+btype = 2;
+console.log(atype); //1
+
+// 객체의 참조
+var aobj = {'id' : 1};
+var bobj = aobj;
+bobj.id = 2;
+console.log(aobj.id); //2
+
+// 아래와 같은 코드는 bobj를 새로 만들었기때문에 aobj에는 지장이 없다.
+var aobj = {'id' : 1};
+var bobj = aobj;
+bobj = {'id' : 2};
+console.log(aobj.id); //1
