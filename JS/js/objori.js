@@ -215,3 +215,31 @@ var aobj = {'id' : 1};
 var bobj = aobj;
 bobj = {'id' : 2};
 console.log(aobj.id); //1
+
+// 함수와 참조
+// 원시데이터 타입을 인자로 넘겼을떄
+var afun = 1
+function fun(b){
+    bfun = 2;
+}
+fun(afun);
+console.log(afun); //1
+
+// 참조데이터 타입을 인자로 넘겼을때
+var afun = {'id' : 1};
+function fun(bfun){
+    bfun = {'id' : 2};
+}
+fun(afun);
+console.log(afun.id); //1
+
+var afun = {'id' : 1};
+function fun(bfun){
+    bfun.id = 2;
+}
+fun(afun);
+console.log(afun.id); //2
+
+
+
+
