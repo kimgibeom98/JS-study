@@ -53,3 +53,64 @@
 // const b = a;
 // a = 20;
 // b // {a:1}
+
+// 얕은 복사
+// let a = {
+//     a : 1,
+//     b : [1,2,3],
+//     c : {d : 1, e : 2}
+// }
+// let b = Object.assign({}, a);
+// b.b[1] = 20;
+// console.log(a.b) [1,20,3];
+
+// 깊은복사
+// let a = {
+//     a : 1,
+//     b : [1,2,3],
+//     c : {d : 1, e : 2}
+// }
+// let b = Object.assign({}, a);
+// b.b = Object.assign([], a.b);
+
+// b.b[1] = 20;
+// console.log(b.b) [1,20,3];
+// console.log(a.b) [1,2,3];
+
+// 깊은복사를 해야만 immutable 하다
+
+
+
+// 전역객체의 프로퍼티?
+
+// js
+// var a = 10
+// console.log(window.a)
+// console.log(a)
+// delete a
+// console.log(window.a)
+// console.log(a)
+//  var는 전역객체의 공간과 전역변수의 공간이 구분되지 않는다. var 사용 x
+
+// window.b = 20
+// console.log(window.b)
+// console.log(b)
+// delete b
+// console.log(window.b)
+// console.log(b)
+
+// let c = 30
+// console.log(window.c)
+// console.log(c)
+// delete c
+// console.log(window.c)
+// console.log(c)
+
+// const d = 40
+// console.log(window.d)
+// console.log(d)
+// delete d
+// console.log(window.d)
+// console.log(d)
+
+// let과 const는 전역객체의 공간과 전역변수의 공간이 별개로 동작한다. let과 const사용 o
