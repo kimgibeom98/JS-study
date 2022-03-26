@@ -26,4 +26,9 @@
 // map : for문을 돌려서 새로운 배열을 만드는 목적 return 필수
 // reduce : for문을 돌려서 최종적으로 다른 무언가를 만드는 목적 return 필수 
 
+// String.raw
 
+// console.log(`Hello\nWorld!`) 
+// console.log(String.raw `Hello\nWorld!`) 
+// console.log(String.raw `Hello
+// World!`)
