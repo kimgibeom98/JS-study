@@ -22,4 +22,8 @@
 // console.log(`Foo ${`Bar`}`)
 // console.log(`Foo ${`Bar ${`Baz`}`}`)   -  ${} 로 계속 묶어줘야함
 
+// forEach : for문을 돌리는거랑 같은 개념
+// map : for문을 돌려서 새로운 배열을 만드는 목적 return 필수
+// reduce : for문을 돌려서 최종적으로 다른 무언가를 만드는 목적 return 필수 
+
 
