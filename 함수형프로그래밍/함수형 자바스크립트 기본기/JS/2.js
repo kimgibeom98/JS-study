@@ -8,10 +8,10 @@
 // - apply1
 // - times
 
-// const apply = f => f(1);
-// const add2 = a => a + 2;
-// console.log(apply(add2)) //3
-// console.log(apply(a => a - 1)) //1
+const apply = f => f(1);
+const add2 = a => a + 2;
+console.log(apply(add2)) //3
+console.log(apply(a => a - 1)) //1
 
 const times = (f,n) => {
     let i  = -1;
