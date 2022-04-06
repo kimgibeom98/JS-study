@@ -15,3 +15,47 @@ function* gen() {
 
   for (const a of gen()) log(a);
   console.clear();
+
+  // #odds
+
+  function* infinity(i = 0) {
+    while (true) yield i++;
+  }
+
+  function* limit(l, iter) {
+    for (const a of iter) {
+      yield a;
+      if (a == l) return;
+    }
+  }
+
+  function* odds(l) {
+    for (const a of limit(l, infinity(1))) {
+      if (a % 2) yield a;
+    }
+  }
+
+  let iter2 = odds(10);
+  log(iter2.next());
+  log(iter2.next());
+  log(iter2.next());
+  log(iter2.next());
+  log(iter2.next());
+  log(iter2.next());
+  log(iter2.next());
+
+  for (const a of odds(40)) console.log(a);
+
+  // # for of, 전개 연산자, 구조 분해, 나머지 연산자
+
+  console.log(...odds(10));
+  console.log([...odds(10), ...odds(20)]);
+
+  const [head, ...tail] = odds(5);
+  console.log(head);
+  console.log(tail);
+
+  const [a, b, ...rest] = odds(10);
+  console.log(a);
+  console.log(b);
+  console.log(rest);
