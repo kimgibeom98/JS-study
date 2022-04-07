@@ -31,3 +31,29 @@ const map = (f, iter) => {
   // log(prices);
 
   console.(map(p => p.price, products));
+
+  // # 이터러블 프로토콜을 따른 map의 다형성
+
+  console.log([1, 2, 3].map(a => a + 1));
+
+  console.log(map(el => el.nodeName, document.querySelectorAll('*')));
+
+  // const it = document.querySelectorAll('*')[Symbol.iterator]();
+  // log(it.next());
+  // log(it.next());
+  // log(it.next());
+  // log(it.next());
+  // log(it.next());
+
+  function* gen() {
+    yield 2;
+    if (false) yield 3;
+    yield 4;
+  }
+
+  log(map(a => a * a, gen()));
+
+  let m = new Map();
+  m.set('a', 10);
+  m.set('b', 20);
+  log(new Map(map(([k, a]) => [k, a * 2], m)));
