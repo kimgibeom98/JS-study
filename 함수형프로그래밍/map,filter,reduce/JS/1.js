@@ -57,3 +57,40 @@ const map = (f, iter) => {
   m.set('a', 10);
   m.set('b', 20);
   log(new Map(map(([k, a]) => [k, a * 2], m)));
+
+
+  // # filter
+
+  const filter = (f, iter) => {
+    let res = [];
+    for (const a of iter) {
+      if (f(a)) res.push(a);
+    }
+    return res;
+  };
+
+  // let under20000 = [];
+  // for (const p of products) {
+  //   if (p.price < 20000) under20000.push(p);
+  // }
+  // log(...under20000);
+
+  console.log(...filter(p => p.price < 20000, products));
+
+  // let over20000 = [];
+  // for (const p of products) {
+  //   if (p.price >= 20000) over20000.push(p);
+  // }
+  // log(...over20000);
+
+  log(...filter(p => p.price >= 20000, products));
+
+  log(filter(n => n % 2, [1, 2, 3, 4]));
+
+  log(filter(n => n % 2, function* () {
+    yield 1;
+    yield 2;
+    yield 3;
+    yield 4;
+    yield 5;
+  }()));
