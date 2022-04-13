@@ -53,3 +53,35 @@ const go = (...args) => reduce((a, f) => f(a), args);
     map(p => p.price),
     reduce(add),
     log);
+
+
+    // ## curry
+    const mult = curry((a, b) => a * b);
+  log(mult(3)(2));
+
+  const mult3 = mult(3);
+  log(mult3(10));
+  log(mult3(5));
+  log(mult3(3));
+  console.clear();
+
+
+  // # 함수 조합으로 함수 만들기
+
+  const total_price = pipe(
+    map(p => p.price),
+    reduce(add));
+
+  const base_total_price = predi => pipe(
+    filter(predi),
+    total_price);
+
+  go(
+    products,
+    base_total_price(p => p.price < 20000),
+    log);
+
+  go(
+    products,
+    base_total_price(p => p.price >= 20000),
+    log);
