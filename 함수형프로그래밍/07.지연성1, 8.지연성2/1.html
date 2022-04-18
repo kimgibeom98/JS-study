@@ -36,6 +36,16 @@
         var list = L.range(4);
         log(list);
         log(reduce(add, list));
+
+
+        function test(name, time, f) {
+          console.time(name);
+          while (time--) f();
+          console.timeEnd(name);
+        }
+
+  // test('range', 10, () => reduce(add, range(1000000)));
+  // test('L.range', 10, () => reduce(add, L.range(1000000)));
       </script>
 </head>
 <body>
