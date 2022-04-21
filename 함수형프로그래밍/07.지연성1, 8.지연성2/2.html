@@ -13,6 +13,13 @@
         // - 제너레이터/이터레이터 프로토콜을 기반으로 구현
 
         // ### L.map
+        L.map = function *(f, iter) {
+          for (const a of iter) yield f(a);
+        };
+        var it = L.map(a => a + 10, [1, 2, 3]);
+        log(it.next());
+        log(it.next());
+        log(it.next());
     </script>
 </head>
 <body>
