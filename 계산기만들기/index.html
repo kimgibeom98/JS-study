@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/index.js"></script>
+</head>
+<style>
+    body{margin: 0; padding: 0;}
+   .calculator{width: 250px; border: 1px solid #959595; margin: 20px auto 0; }
+   .calculator input{background-color: #e0e0e0; cursor: pointer; font-size: 20px; border: 1px solid #959595;}
+   #result{height: 62.5px; padding-left: 15px; cursor: Auto; width: 100%; box-sizing: border-box; color: white; background-color: #4c4c4c;}
+   .num-box{display: flex;}
+   .num-box input{width: 62.5px; height: 62.5px;}
+   .num2-box{display: flex;}
+   .num2-box input:nth-of-type(1){width: 126px; height: 62.5px;}
+   .num2-box input{width: 62.5px; height: 62.5px;}
+   .num1-box{display: flex;}
+   .num1-box input{width: 62.5px; height: 62.5px;}
+   .num1-box input:first-of-type{width: 188px; height: 62.5px;}
+   .op-cr{background-color: #b166fe !important; color: white;}
+</style>
+<body>
+    <div class="calculator">
+        <input type="text" id="result">
+        <div class="num1-box">
+            <input type="button" value="AC">
+            <input class="op-cr" type="button" value="%">
+        </div>
+        <div class="num-box">
+            <input type="button" value="7" onclick="refucn(7)">
+            <input type="button" value="8" onclick="refucn(8)">
+            <input type="button" value="9" onclick="refucn(9)">
+            <input class="op-cr" type="button" value="X" onclick="symbol('X')">
+        </div>
+        <div class="num-box">
+            <input type="button" value="4" onclick="refucn(4)">
+            <input type="button" value="5" onclick="refucn(5)">
+            <input type="button" value="6" onclick="refucn(6)">
+            <input class="op-cr" type="button" value="-" onclick="symbol('-')">
+        </div>
+        <div class="num-box">
+            <input type="button" value="1" onclick="refucn(1)">
+            <input type="button" value="2" onclick="refucn(2)">
+            <input type="button" value="3" onclick="refucn(3)">
+            <input class="op-cr" type="button" value="+" onclick="symbol('+')">
+        </div>
+        <div class="num2-box">
+            <input type="button" value="0">
+            <input type="button" value=".">
+            <input class="op-cr" type="button" value="=" onclick="symbol('=')">
+        </div>
+    </div>
+</body>
+</html>
