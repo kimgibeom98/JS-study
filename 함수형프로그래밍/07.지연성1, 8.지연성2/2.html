@@ -155,6 +155,29 @@
 // [[mapping, filtering, mapping], [mapping, filtering, mapping]]
 
 // ## 결과를 만드는 함수 reduce, take
+
+L.entries = function* (obj) {
+    for (const k in obj) yield [k, obj[k]];
+  };
+
+  const join = curry((sep = ',', iter) =>
+    reduce((a, b) => `${a}${sep}${b}`, iter));
+
+  const queryStr = pipe(
+    L.entries,
+    L.map(([k, v]) => `${k}=${v}`),
+    join('&'));
+
+  log(queryStr({limit: 10, offset: 10, type: 'notice'}));
+
+  // function *a() {
+  //   yield 10;
+  //   yield 11;
+  //   yield 12;
+  //   yield 13;
+  // }
+  //
+  // log(join(' - ', a()));
     </script>
 </head>
 <body>
