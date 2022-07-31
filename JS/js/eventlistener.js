@@ -8,3 +8,9 @@ for(const elbox of element){
         }
     })
 }
+
+    let testvariable = document.getElementById('hw');
+    testvariable.addEventListener('click', () => {
+        alert('test');
+    })
+
