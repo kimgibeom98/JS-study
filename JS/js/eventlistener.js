@@ -1,6 +1,6 @@
 function executeEven(e){
-    console.log(e)
-    e.addEventListener("click", () => {
-        alert(e.innerHTML)
-    })
+    alert(e.innerHTML);
 }
+document.addEventListener("click", () => {
+    executeEven();
+})
