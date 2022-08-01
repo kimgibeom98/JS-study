@@ -1,16 +1,15 @@
-let element = document.querySelectorAll('.main');
-for(const elbox of element){
-    elbox.addEventListener('click', () =>{
-        if(elbox.innerHTML === 'header'){
-            alert(elbox.innerHTML)
-        }else{
-            console.log(elbox.innerHTML)
-        }
-    })
-}
+const $header = document.querySelector("#head");
+const $content = document.querySelector("#content");
+const $footer = document.querySelector("#footer");
 
-    let testvariable = document.getElementById('hw');
-    testvariable.addEventListener('click', () => {
-        alert('test');
-    })
+$header.addEventListener('click', (e) => {
+    alert(e.target.innerHTML)
+})
 
+$content.addEventListener('click', (e) => {
+    console.log(e.target.innerHTML)
+})
+
+$footer.addEventListener('click', (e) => {
+    console.log(e.target.innerHTML)
+})
