@@ -20,3 +20,7 @@ function solution(arr) {
     }
   
 }
+
+solution([4,3,2,1]);
+solution([10]);
+solution([1,5,3,2]);
