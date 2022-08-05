@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <style>
-    #body > div > textarea{position: absolute; background-color: #fff7d1;  padding: 15px;  box-shadow: 1px 1px 8px #959595;}
+    #body > div{position: absolute; background-color: #fff7d1; box-shadow: 1px 1px 8px #959595;}
+    #body > div > button{padding: 0; width: 100%; cursor: pointer; padding-right: 8px; font-size: 20px; text-align: right; display: block; border: none; background: #fff2ab;}
+    #body > div > textarea{background-color: #fff7d1; box-sizing: border-box; width: 100%; height: calc(100% - 23px); border: none;  padding: 15px;  }
     #body > div > textarea:focus{outline: none;}
     #body{position: relative;}
 </style>
@@ -21,7 +23,7 @@
         <button id="insert-btn" type="button">insert</button>
     </div>  
     <div id="body">
-
+     
     </div>
 </body>
 

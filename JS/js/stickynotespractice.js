@@ -11,17 +11,21 @@ window.onload = function(){
 
         $insertbtn.addEventListener('click', () => {
             setTimeout(() => {  
-
                 let newDiv = document.createElement("div");
                 newDiv.classList.add(`note-box${count}`);
 
-                let newTextArea = document.createElement("textarea");
-                newTextArea.placeholder = '메모를 입력하세요...';
-                newDiv.appendChild(newTextArea);
+                let closeDiv = document.createElement("button");
+                let closetxt = document.createTextNode('X'); 
+                closeDiv.appendChild(closetxt);
+            
+                let newTextarea = document.createElement("textarea");
+                newTextarea.placeholder = '메모를 입력하세요...';
 
+                newDiv.appendChild(closeDiv);
+                newDiv.appendChild(newTextarea);
                 $body.appendChild(newDiv);
 
-                const $stickynote = document.querySelector(`.note-box${count} > textarea`);
+                const $stickynote = document.querySelector(`.note-box${count}`);
 
                 $stickynote.style.width = `${$boxwidth.value}px`;
                 $stickynote.style.height = `${$boxheight.value}px`;
@@ -29,7 +33,15 @@ window.onload = function(){
                 $stickynote.style.left = `${$boxleft.value}%`;
                 
                 count ++;
-            }, 1000);
+
+                closeDiv.addEventListener('click', () =>{
+                    $stickynote.style.display = 'none'
+                });    
+                
+            },1000);
+ 
         });
+
+        
 }
 
