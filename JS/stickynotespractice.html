@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <style>
-    #sticky-note{background-color: #fff7d1; position: absolute;  box-shadow: 1px 1px 8px #959595;}
+    #body > div > textarea{position: absolute; background-color: #fff7d1;  padding: 15px;  box-shadow: 1px 1px 8px #959595;}
+    #body > div > textarea:focus{outline: none;}
+    #body{position: relative;}
 </style>
 <script src="JS/stickynotespractice.js"></script>
 <body>
@@ -17,8 +19,10 @@
         <input id="ip-top" type="text" placeholder="박스의 top">
         <input id="ip-left" type="text" placeholder="박스의 left">
         <button id="insert-btn" type="button">insert</button>
-        <div id="sticky-note"></div>
     </div>  
+    <div id="body">
+
+    </div>
 </body>
 
 </html>
