@@ -7,11 +7,7 @@ window.onload = function(){
     const $insertbtn = document.querySelector('#insert-btn');
     const $body = document.querySelector('#body');
     let count = 1;
-
-    let closediv = document.createElement("button");
-    let closetxt = document.createTextNode('X'); 
-    closediv.appendChild(closetxt);
-
+    
     $insertbtn.addEventListener('click', () => {
         setTimeout(() => {  
             addnote();
@@ -27,6 +23,7 @@ window.onload = function(){
         let closediv = document.createElement("button");
         let closetxt = document.createTextNode('X'); 
         closediv.appendChild(closetxt);
+        closediv.classList.add('btn-close');
 
         let newtextarea = document.createElement("textarea");
         newtextarea.placeholder = '메모를 입력하세요...';
@@ -44,12 +41,12 @@ window.onload = function(){
     }
 
     // 메모삭제 함수
-    // closediv.addEventListener('click', (e) => {
+    // closebtn.addEventListener('click', (e) => {
     //     console.log(e.target)
     //     e.target.parentNode.remove();
     // });
 
-    closediv.onclick = function(){
+    closebtn.onclick = function(){
         this.parentNode.remove();
     }
 
