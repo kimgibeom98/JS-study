@@ -1,4 +1,3 @@
-
 window.onload = function(){
 
     const $boxwidth = document.querySelector('#ip-width');
@@ -9,39 +8,43 @@ window.onload = function(){
     const $body = document.querySelector('#body');
     let count = 1;
 
-        $insertbtn.addEventListener('click', () => {
-            setTimeout(() => {  
-                let newDiv = document.createElement("div");
-                newDiv.classList.add(`note-box${count}`);
+    $insertbtn.addEventListener('click', () => {
+        setTimeout(() => {  
+            addnote();
+        },1000);
+      
+    });
 
-                let closeDiv = document.createElement("button");
-                let closetxt = document.createTextNode('X'); 
-                closeDiv.appendChild(closetxt);
-            
-                let newTextarea = document.createElement("textarea");
-                newTextarea.placeholder = '메모를 입력하세요...';
+    // 메모추가 함수
+    function addnote(){
+        let newdiv = document.createElement("div");
+        newdiv.classList.add(`note-box${count}`);
+    
+        let closediv = document.createElement("button");
+        let closetxt = document.createTextNode('X'); 
+        closediv.appendChild(closetxt);
+        closediv.onclick = delnote;
 
-                newDiv.appendChild(closeDiv);
-                newDiv.appendChild(newTextarea);
-                $body.appendChild(newDiv);
+        let newtextarea = document.createElement("textarea");
+        newtextarea.placeholder = '메모를 입력하세요...';
+    
+        newdiv.appendChild(closediv);
+        newdiv.appendChild(newtextarea);
+        $body.appendChild(newdiv);
+    
+        newdiv.style.width = `${$boxwidth.value}px`;
+        newdiv.style.height = `${$boxheight.value}px`;
+        newdiv.style.top = `${$boxtop.value}%`;
+        newdiv.style.left = `${$boxleft.value}%`;
+                    
+        count ++;
+    }
 
-                const $stickynote = document.querySelector(`.note-box${count}`);
+    // 메모삭제 함수
+    function delnote(){
+        this.parentNode.remove();
+    }
+    
 
-                $stickynote.style.width = `${$boxwidth.value}px`;
-                $stickynote.style.height = `${$boxheight.value}px`;
-                $stickynote.style.top = `${$boxtop.value}%`;
-                $stickynote.style.left = `${$boxleft.value}%`;
-                
-                count ++;
-
-                closeDiv.addEventListener('click', () =>{
-                    $stickynote.style.display = 'none'
-                });    
-                
-            },1000);
- 
-        });
-
-        
 }
 
