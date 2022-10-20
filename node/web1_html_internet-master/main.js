@@ -2,7 +2,7 @@ let http = require('http');
 let fs = require('fs');
 let url = require('url');
 
-let app = http.createServer(function (request, response) {
+  let app = http.createServer(function (request, response) {
   let _url = request.url;
   let queryData = url.parse(_url, true).query;
   let title = queryData.id
