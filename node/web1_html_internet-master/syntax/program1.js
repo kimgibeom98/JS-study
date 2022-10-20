@@ -7,4 +7,4 @@ if(args[2] === "1"){
 }else{
     console.log('C2')
 }
-// console.log('d')
+console.log('d')
