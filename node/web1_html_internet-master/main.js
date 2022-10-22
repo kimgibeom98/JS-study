@@ -17,6 +17,15 @@ function templateHTML(title, list, body){
   </html>`;
 }
 
+function templateList(filelist){
+  let list = '<ul>';
+  for (let i = 0; i < filelist.length; i++) {
+    list = list + `<li><a href="/?id=${filelist[i]}">${filelist[i]}</a></li>`
+  }
+  list = list + '</ul>'
+  return list
+}
+
 let app = http.createServer(function (request, response) {
   let _url = request.url;
   let queryData = url.parse(_url, true).query;
@@ -27,23 +36,15 @@ let app = http.createServer(function (request, response) {
       fs.readdir('./data', (err, filelist) => {
         title = 'Welcome';
         description = "Hello, Node.js"
-        let list = '<ul>';
-        for (let i = 0; i < filelist.length; i++) {
-          list = list + `<li><a href="/?id=${filelist[i]}">${filelist[i]}</a></li>`
-        }
-        list = list + '</ul>'
+        const list = templateList(filelist);
         const template = templateHTML(title, list,`<h2>${title}</h2>${description}`)
         response.writeHead(200);
         response.end(template);
       });
     } else {
       fs.readdir('./data', (err, filelist) => {
-        let list = '<ul>';
-        for (let i = 0; i < filelist.length; i++) {
-          list = list + `<li><a href="/?id=${filelist[i]}">${filelist[i]}</a></li>`
-        }
-        list = list + '</ul>'
         fs.readFile(`data/${title}`, 'utf8', function (err, description) {
+          const list = templateList(filelist);
           const template = templateHTML(title, list,`<h2>${title}</h2>${description}`)
           response.writeHead(200);
           response.end(template);
