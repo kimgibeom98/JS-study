@@ -26,7 +26,7 @@ function templateList(filelist){
   return list
 }
 
-let app = http.createServer(function (request, response) {
+let app = http.createServer((request, response) => { 
   let _url = request.url;
   let queryData = url.parse(_url, true).query;
   let pathname = url.parse(_url, true).pathname;
@@ -43,7 +43,7 @@ let app = http.createServer(function (request, response) {
       });
     } else {
       fs.readdir('./data', (err, filelist) => {
-        fs.readFile(`data/${title}`, 'utf8', function (err, description) {
+        fs.readFile(`data/${title}`, 'utf8', (err, description) => {
           const list = templateList(filelist);
           const template = templateHTML(title, list,`<h2>${title}</h2>${description}`)
           response.writeHead(200);
