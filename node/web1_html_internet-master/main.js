@@ -24,7 +24,7 @@ function templateList(filelist){
   }
   list = list + '</ul>'
   return list
-}
+} 
 
 let app = http.createServer((request, response) => { 
   let _url = request.url;
