@@ -6,6 +6,8 @@ const a = function(){
     console.log('A')
 }
 
-function slowfunc(){
-    
+function slowfunc(callback){
+    callback();
 }
+
+slowfunc(a);
