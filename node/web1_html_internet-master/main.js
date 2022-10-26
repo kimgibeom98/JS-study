@@ -92,10 +92,11 @@ let app = http.createServer((request, response) => {
       const post = qs.parse(body)
       const title = post.title;
       const description = post.description;
-      console.log(post)
+      fs.writeFile(`data/${title}`, description, `utf-8`, (err) => {
+        response.writeHead(200);
+        response.end('success');
+      })
     });
-    response.writeHead(200);
-    response.end('success');
   } else {
     response.writeHead(404);
     response.end("Not found");
