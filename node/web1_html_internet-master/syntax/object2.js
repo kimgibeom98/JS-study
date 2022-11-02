@@ -9,4 +9,4 @@ a[0]();
 const o = {
     func : f
 }
-o.func();
+o.func(); 
