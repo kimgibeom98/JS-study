@@ -1,7 +1,7 @@
-let http = require('http');
-let fs = require('fs');
-let url = require('url');
-let qs = require('querystring');
+const http = require('http');
+const fs = require('fs');
+const url = require('url');
+const qs = require('querystring');
 
 function templateHTML(title, list, body, control){
   return ` <!doctype html>
@@ -28,11 +28,11 @@ function templateList(filelist){
   return list
 } 
 
-let app = http.createServer((request, response) => { 
-  let _url = request.url;
-  let queryData = url.parse(_url, true).query;
-  let pathname = url.parse(_url, true).pathname;
-  let title = queryData.id;
+const app = http.createServer((request, response) => { 
+  const _url = request.url;
+  const queryData = url.parse(_url, true).query;
+  const pathname = url.parse(_url, true).pathname;
+  const title = queryData.id;
   if (pathname === "/") {
     if (title === undefined) {
       fs.readdir('./data', (err, filelist) => {
