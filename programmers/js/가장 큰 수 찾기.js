@@ -4,7 +4,7 @@
 function solution(array) {
     const answer = [];
     const maxNum = Math.max(...array);
-    const maxIndex = array.indexOf(Math.max(...array));
+    const maxIndex = array.indexOf(maxNum);
     answer.push(maxNum,maxIndex);
     return answer;
 }
