@@ -11,6 +11,7 @@ const app = http.createServer((request, response) => {
   const _url = request.url;
   const queryData = url.parse(_url, true).query;
   const pathname = url.parse(_url, true).pathname;
+  console.log(pathname)
   let title = queryData.id;
   if (pathname === "/") {
     if (title === undefined) {
@@ -23,8 +24,6 @@ const app = http.createServer((request, response) => {
           `<a href="/create">create</a>`)
         response.writeHead(200);
         response.end(html);
-
-
       });
     } else {
       fs.readdir('./data', (err, filelist) => {
@@ -32,7 +31,7 @@ const app = http.createServer((request, response) => {
         fs.readFile(`data/${filteredid}`, 'utf8', (err, description) => {
           const sanitizeTitle = sanitizeHtml(title);
           const sanitizeDescription = sanitizeHtml(description, {
-            allowedTags:['h1']
+            allowedTags: ['h1']
           });
           const list = template.List(filelist);
           const html = template.HTML(sanitizeTitle, list,
