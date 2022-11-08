@@ -5,13 +5,12 @@ const qs = require('querystring');
 const template = require('./lib/template.js');
 const path = require('path');
 const sanitizeHtml = require('sanitize-html');
-
+const END_POINT = 'http://localhost:3000';
 
 const app = http.createServer((request, response) => {
   const _url = request.url;
   const queryData = url.parse(_url, true).query;
   const pathname = url.parse(_url, true).pathname;
-  console.log(pathname)
   let title = queryData.id;
   if (pathname === "/") {
     if (title === undefined) {
@@ -61,7 +60,7 @@ const app = http.createServer((request, response) => {
             <title>Document</title>
         </head>
         <body>
-            <form action="http://localhost:3000/create_process" method="post">
+            <form action="${END_POINT}/create_process" method="post">
                 <p><input type="text" name="title" placeholder="title"></p>
                 <p>
                     <textarea name="description" id="" cols="30" rows="10" placeholder="description"></textarea>
@@ -107,7 +106,7 @@ const app = http.createServer((request, response) => {
               <title>Document</title>
           </head>
           <body>
-              <form action="http://localhost:3000/update_process" method="post">
+              <form action="${END_POINT}/update_process" method="post">
                   <input type="hidden" name="id" value="${title}">
                   <p><input type="text" name="title" placeholder="title" value="${title}"></p>
                   <p>
