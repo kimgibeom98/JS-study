@@ -22,7 +22,7 @@ async function viewList(e) {
     if (searchInput.value.length > 0) {
       requestLanguages();
       if (e.key !== "ArrowUp" && e.key !== "ArrowDown" && e.keyCode !== 13) {
-        searchData();
+        searchLanguage();
       }
       selectkeyboard(e);
     } else {
@@ -33,7 +33,7 @@ async function viewList(e) {
   }
 }
 
-async function searchData() {
+async function searchLanguage() {
   showListbox.style.display = "block";
   showListbox.innerHTML = '';
   let documentFragment = '';
@@ -54,7 +54,7 @@ async function searchData() {
 function selectkeyboard(e) {
   const keywordsList = showListbox.querySelectorAll("ul > li");
   const selectedKeyword = showListbox.querySelector("ul > li.Suggestion__item--selected");
-  if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+  if (["ArrowUp","ArrowDown"].includes(e.key)) {
     let target;
     const initIndex = e.key === "ArrowUp" ? keywordsList.length - 1 : 0;
     const adjacentSibling = selectedKeyword && (e.key === "ArrowUp" ? selectedKeyword.previousElementSibling : selectedKeyword.nextElementSibling);
@@ -67,15 +67,15 @@ function selectkeyboard(e) {
     target.classList.add("Suggestion__item--selected");
   } else if (e.key === 'Enter') {
     alert(selectedKeyword.innerText)
-    selectLangage(selectedKeyword.innerText);
+    selectlanguage(selectedKeyword.innerText);
   }
 }
 
 function clickSelectLanguage(e) {
-  selectLangage(e.target.innerText);
+  selectlanguage(e.target.innerText);
 }
 
-function selectLangage(language) {
+function selectlanguage(language) {
   if (languages.includes(language)) {
     const firstCaseIndex = languages.indexOf(language);
     languages.splice(firstCaseIndex,1);
