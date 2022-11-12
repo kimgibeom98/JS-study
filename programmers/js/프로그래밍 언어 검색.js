@@ -6,7 +6,7 @@ let accounts = [];
 
 searchInput.focus();
 
-async function getdata() {
+async function getData() {
   try {
     const resppnse = await fetch(`https://wr4a6p937i.execute-api.ap-northeast-2.amazonaws.com/dev/languages?keyword=${searchInput.value}`, {
       method: 'GET'
@@ -20,7 +20,7 @@ async function getdata() {
 async function viewList(e) {
   try {
     if (searchInput.value.length > 0) {
-      getdata();
+      getData();
       if (e.key !== "ArrowUp" && e.key !== "ArrowDown" && e.keyCode !== 13) {
         searchData(accounts);
       }
