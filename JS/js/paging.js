@@ -8,6 +8,8 @@ function clickEvethandling(e) {
   const currentPage = pageNum.innerText; //페이징 번호
   const totalCount = dataArr.length // 배열의 전체 갯수
   const pageCount = 5;
+  const totalArr = Math.ceil(totalCount / pageCount);  
+  const Remainder = currentPage % 5
 
   dataArr.slice(1, pageCount);
 
@@ -17,4 +19,4 @@ function clickEvethandling(e) {
 
 
 }
-pagingBox.addEventListener('click', clickEvethandling)
+pagingBox.addEventListener('click', clickEvethandling) 
