@@ -19,10 +19,10 @@ function clickEvethandling(e) {
   pageNum.classList.remove('active');
   e.target.classList.add('active');
 
-  defalutShowdata();
+  render();
 }
 
-function defalutShowdata(){
+function render(){
   const pageNum = document.querySelector('button.active');
   const currentPage = pageNum.innerText;
 
@@ -34,6 +34,6 @@ function defalutShowdata(){
   showData.innerHTML += resultData.map((el) => `<span>${el}</span>`)
 }
 
-defalutShowdata();
+render();
 pagingBox.addEventListener('click', clickEvethandling) 
 
