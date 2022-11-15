@@ -30,10 +30,11 @@ function render(){
   minNumber = maxNumber - pageCount;
 
   const resultData = dataArrs.slice(minNumber, maxNumber);
-  showData.innerHTML = '';
-  showData.innerHTML += resultData.map((el) => `<span>${el}</span>`)
+  showData.innerHTML = resultData.map((el) => `<span>${el}</span>`).join("");
 }
 
 render();
 pagingBox.addEventListener('click', clickEvethandling) 
+
+
 
