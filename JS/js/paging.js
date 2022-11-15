@@ -6,9 +6,9 @@ function clickEvethandling(e) {
   pageNum.classList.remove('active');
   e.target.classList.add('active');
   const currentPage = e.target.innerText;
-  var pageCount = 5;
-  var maxNumber = currentPage * pageCount;
-  var minNumber = maxNumber - pageCount;
+  const pageCount = 5;
+  const maxNumber = currentPage * pageCount;
+  const minNumber = maxNumber - pageCount;
 
 
   console.log(dataArr.slice(minNumber, maxNumber));
