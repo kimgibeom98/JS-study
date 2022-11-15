@@ -4,19 +4,13 @@ const showData = document.querySelector('#viewdata');
 
 function clickEvethandling(e) {
   const pageNum = document.querySelector('button.active');
-  
-  const currentPage = pageNum.innerText; //페이징 번호
-  const totalCount = dataArr.length // 배열의 전체 갯수
-  const pageCount = 5;
-  const totalArr = Math.ceil(totalCount / pageCount);  
-  const Remainder = currentPage % 5
-
-  dataArr.slice(1, pageCount);
-
-
   pageNum.classList.remove('active');
   e.target.classList.add('active');
+  const currentPage = e.target.innerText;
+  var pageCount = 5;
+  var maxNumber = currentPage * pageCount;
+  var minNumber = maxNumber - pageCount;
 
-
+  console.log(dataArr.slice(minNumber, maxNumber));
 }
 pagingBox.addEventListener('click', clickEvethandling) 
