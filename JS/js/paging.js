@@ -1,8 +1,8 @@
-const dataArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+const dataArrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 const pagingBox = document.querySelector('#paging');
 const showData = document.querySelector('#viewdata');
 const pageCount = 5;
-const pagaeGroup = Math.ceil(dataArr.length / pageCount);
+const pagaeGroup = Math.ceil(dataArrs.length / pageCount);
 let createDiv = '';
 let maxNumber;
 let minNumber;
@@ -29,7 +29,7 @@ function render(){
   maxNumber = currentPage * pageCount;
   minNumber = maxNumber - pageCount;
 
-  const resultData = dataArr.slice(minNumber, maxNumber);
+  const resultData = dataArrs.slice(minNumber, maxNumber);
   showData.innerHTML = '';
   showData.innerHTML += resultData.map((el) => `<span>${el}</span>`)
 }
