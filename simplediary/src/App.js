@@ -12,7 +12,6 @@ function App() {
 
   const dataId = useRef(0);
 
-
   const getData = async () => {
     const res = await fetch(
       "https://jsonplaceholder.typicode.com/comments"
