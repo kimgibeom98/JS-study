@@ -1,10 +1,8 @@
 // import logo from './logo.svg';
-import { useMemo, useEffect, useRef, useState } from "react";
+import { useMemo, useEffect, useRef, useState, useCallback } from "react";
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
-import OptimizeTest from "./OptimizeTest";
-import OptimizeTest2 from "./OptimizeTest2";
 
 // import Lifecycle from "./Lifecycle";
 
@@ -38,7 +36,7 @@ function App() {
   }, [])
 
 
-  const onCreate = (author, content, emotion) => {
+  const onCreate = useCallback((author, content, emotion) => {
     const created_date = new Date().getTime();
     const newItem = {
       author,
@@ -48,8 +46,8 @@ function App() {
       id: dataId.current
     }
     dataId.current += 1;
-    setData([newItem, ...data])
-  }
+    setData((data) => [newItem, ...data])
+  }, []);
 
   const onEdit = (targetId, newContent) => {
     setData(
@@ -76,7 +74,7 @@ function App() {
   return (
     <div className="App">
       {/* <OptimizeTest /> */}
-      <OptimizeTest2 />
+      {/* <OptimizeTest2 /> */}
       {/* <Lifecycle /> */}
       <DiaryEditor onCreate={onCreate} />
       <div>전체 일기 : {data.length}</div>
