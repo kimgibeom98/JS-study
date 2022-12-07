@@ -3,6 +3,7 @@ import { useMemo, useEffect, useRef, useState } from "react";
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
+import OptimizeTest from "./OptimizeTest";
 // import Lifecycle from "./Lifecycle";
 
 
@@ -62,7 +63,6 @@ function App() {
   // useMemo(최적화) - 리랜더링 할때마다 연산을 또 하지 않아도 되는값을 기억해둠 - 메모리를 굳이 사용하지않음
   // useMemo로 사용할경우 useMemo는 값을 리턴해줌 - useMemo를 감싸는 함수는 더이상 함수가 아닌 값이다.
   const getDiaryAnalysis = useMemo(() => {
-    console.log("일기 분석 시작")
     const goodCount = data.filter((it) => it.emotion >= 3).length;
     const badCount = data.length - goodCount;
     const goodRatio = (goodCount / data.length) * 100;
@@ -73,6 +73,7 @@ function App() {
 
   return (
     <div className="App">
+      <OptimizeTest />
       {/* <Lifecycle /> */}
       <DiaryEditor onCreate={onCreate} />
       <div>전체 일기 : {data.length}</div>
