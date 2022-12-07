@@ -4,6 +4,8 @@ import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
 import OptimizeTest from "./OptimizeTest";
+import OptimizeTest2 from "./OptimizeTest2";
+
 // import Lifecycle from "./Lifecycle";
 
 
@@ -73,7 +75,8 @@ function App() {
 
   return (
     <div className="App">
-      <OptimizeTest />
+      {/* <OptimizeTest /> */}
+      <OptimizeTest2 />
       {/* <Lifecycle /> */}
       <DiaryEditor onCreate={onCreate} />
       <div>전체 일기 : {data.length}</div>
