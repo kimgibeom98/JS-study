@@ -19,7 +19,9 @@ const CounterB = ({ obj }) => {
 const areEqual = (prevProps, nextProps) => {
     // return true - 이전값과 다음값이 같다 리랜더링이 일어나면 안됨
     // return flase = 이전값과 다음값이 다르다 리랜더링이 일어나야한다.
+    return prevProps.obj.count === nextProps.obj.count
 }
+const MemoizedCounterB = React.memo(CounterB, areEqual);
 
 const OptimizeTest = () => {
 
@@ -36,7 +38,7 @@ const OptimizeTest = () => {
         </div>
         <div>
             <h2>Count B</h2>
-            <CounterB obj={obj} />
+            <MemoizedCounterB obj={obj} />
             <button onClick={() => setObj({
                 count: obj.count
             })}>B button</button>
