@@ -49,16 +49,17 @@ function App() {
     setData((data) => [newItem, ...data])
   }, []);
 
-  const onEdit = (targetId, newContent) => {
-    setData(
+  const onRemove = useCallback((targetId) => {
+    setData(data => data.filter((it) => it.id !== targetId))
+  }, []);
+
+  const onEdit = useCallback((targetId, newContent) => {
+    setData(data =>
       data.map((it) => it.id === targetId ? { ...it, content: newContent } : it)
     )
-  }
+  }, []);
 
-  const onRemove = (targetId) => {
-    const newDiaryList = data.filter((it) => it.id !== targetId);
-    setData(newDiaryList)
-  }
+
 
   // useMemo(최적화) - 리랜더링 할때마다 연산을 또 하지 않아도 되는값을 기억해둠 - 메모리를 굳이 사용하지않음
   // useMemo로 사용할경우 useMemo는 값을 리턴해줌 - useMemo를 감싸는 함수는 더이상 함수가 아닌 값이다.
