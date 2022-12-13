@@ -33,6 +33,8 @@ const reducer = (state, action) => {
 
 export const DiaryStateContext = React.createContext();
 
+export const DiaryDispatchContext = React.createContext();
+
 
 function App() {
   // const [data, setData] = useState([]);
@@ -82,7 +84,9 @@ function App() {
     dispatch({ type: 'EDIT', targetId, newContent })
   }, []);
 
-
+  const memoizedDisatches = useMemo(() => {
+    return { onCreate, onRemove, onEdit }
+  }, [])
 
   // useMemo(최적화) - 리랜더링 할때마다 연산을 또 하지 않아도 되는값을 기억해둠 - 메모리를 굳이 사용하지않음
   // useMemo로 사용할경우 useMemo는 값을 리턴해줌 - useMemo를 감싸는 함수는 더이상 함수가 아닌 값이다.
@@ -97,17 +101,16 @@ function App() {
 
   return (
     <DiaryStateContext.Provider value={data}>
-      <div className="App">
-        {/* <OptimizeTest /> */}
-        {/* <OptimizeTest2 /> */}
-        {/* <Lifecycle /> */}
-        <DiaryEditor onCreate={onCreate} />
-        <div>전체 일기 : {data.length}</div>
-        <div>기분 좋은 일기 개수 : {goodCount}</div>
-        <div>기분 나쁜 일기 개수 : {badCount}</div>
-        <div>기분 나쁜 일기 비율 : {goodRatio}%</div>
-        <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
-      </div>
+      <DiaryDispatchContext.Provider value={memoizedDisatches}>
+        <div className="App">
+          <DiaryEditor />
+          <div>전체 일기 : {data.length}</div>
+          <div>기분 좋은 일기 개수 : {goodCount}</div>
+          <div>기분 나쁜 일기 개수 : {badCount}</div>
+          <div>기분 나쁜 일기 비율 : {goodRatio}%</div>
+          <DiaryList />
+        </div>
+      </DiaryDispatchContext.Provider>
     </DiaryStateContext.Provider>
   );
 }
