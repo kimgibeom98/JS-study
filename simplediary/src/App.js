@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import { useMemo, useEffect, useRef, useCallback, useReducer } from "react";
+import { act } from "react-dom/test-utils";
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
@@ -8,10 +9,23 @@ import DiaryList from './DiaryList';
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'INIT':
-    case 'CREATE':
-    case 'REMOVE':
-    case 'EDIT':
+    case 'INIT': {
+      return action.data
+    }
+    case 'CREATE': {
+      const created_date = new Date().getTime();
+      const newitem = {
+        ...action.data,
+        created_date
+      }
+      return [newitem, ...state];
+    }
+    case 'REMOVE': {
+      return state.filter((it) => it.id !== action.targetId)
+    }
+    case 'EDIT': {
+      return state.map((it) => it.id === action.targetId ? { ...it, content: action.newContent } : it)
+    }
     default:
       return state;
   }
@@ -39,7 +53,7 @@ function App() {
       };
     })
 
-    setData(initData);
+    dispatch({ type: 'INIT', data: initData });
   }
 
   useEffect(() => {
@@ -47,27 +61,22 @@ function App() {
   }, [])
 
 
-  const onCreate = useCallback((author, content, emotion) => {
-    const created_date = new Date().getTime();
-    const newItem = {
-      author,
-      content,
-      emotion,
-      created_date,
-      id: dataId.current
-    }
-    dataId.current += 1;
-    setData((data) => [newItem, ...data])
-  }, []);
+  const onCreate = useCallback(
+    (author, content, emotion) => {
+      dataId.current += 1;
+      dispatch({
+        type: 'CREATE',
+        data: { author, content, emotion, id: dataId.current }
+      })
+    }, []);
 
   const onRemove = useCallback((targetId) => {
-    setData(data => data.filter((it) => it.id !== targetId))
+    dispatch({ type: "REMOVE", targetId })
   }, []);
 
   const onEdit = useCallback((targetId, newContent) => {
-    setData(data =>
-      data.map((it) => it.id === targetId ? { ...it, content: newContent } : it)
-    )
+
+    dispatch({ type: 'EDIT', targetId, newContent })
   }, []);
 
 
