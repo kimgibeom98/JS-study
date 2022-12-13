@@ -1,15 +1,26 @@
 // import logo from './logo.svg';
-import { useMemo, useEffect, useRef, useState, useCallback } from "react";
+import { useMemo, useEffect, useRef, useCallback, useReducer } from "react";
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
 
 // import Lifecycle from "./Lifecycle";
 
-
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'INIT':
+    case 'CREATE':
+    case 'REMOVE':
+    case 'EDIT':
+    default:
+      return state;
+  }
+}
 
 function App() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  // useState에서 useReduce로 변경 - 이유는 복잡한 상태변화로직을 컨포넌트 밖으로 분리하기위해서.
+  const [data, dispatch] = useReducer(reducer, []);
 
   const dataId = useRef(0);
 
