@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
-import { useMemo, useEffect, useRef, useCallback, useReducer } from "react";
-import { act } from "react-dom/test-utils";
+import React, { useMemo, useEffect, useRef, useCallback, useReducer } from "react";
 import './App.css';
 import DiaryEditor from './DiaryEditor';
 import DiaryList from './DiaryList';
@@ -30,6 +29,10 @@ const reducer = (state, action) => {
       return state;
   }
 }
+
+
+export const DiaryStateContext = React.createContext();
+
 
 function App() {
   // const [data, setData] = useState([]);
@@ -93,17 +96,19 @@ function App() {
   const { goodCount, badCount, goodRatio } = getDiaryAnalysis;
 
   return (
-    <div className="App">
-      {/* <OptimizeTest /> */}
-      {/* <OptimizeTest2 /> */}
-      {/* <Lifecycle /> */}
-      <DiaryEditor onCreate={onCreate} />
-      <div>전체 일기 : {data.length}</div>
-      <div>기분 좋은 일기 개수 : {goodCount}</div>
-      <div>기분 나쁜 일기 개수 : {badCount}</div>
-      <div>기분 나쁜 일기 비율 : {goodRatio}%</div>
-      <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
-    </div>
+    <DiaryStateContext.Provider value={data}>
+      <div className="App">
+        {/* <OptimizeTest /> */}
+        {/* <OptimizeTest2 /> */}
+        {/* <Lifecycle /> */}
+        <DiaryEditor onCreate={onCreate} />
+        <div>전체 일기 : {data.length}</div>
+        <div>기분 좋은 일기 개수 : {goodCount}</div>
+        <div>기분 나쁜 일기 개수 : {badCount}</div>
+        <div>기분 나쁜 일기 비율 : {goodRatio}%</div>
+        <DiaryList onEdit={onEdit} onRemove={onRemove} diaryList={data} />
+      </div>
+    </DiaryStateContext.Provider>
   );
 }
 
