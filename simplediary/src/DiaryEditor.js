@@ -6,9 +6,9 @@ const DiaryEditor = () => {
     const { onCreate } = useContext(DiaryDispatchContext)
 
 
-    useEffect(() => {
-        console.log(`DiaryEditor 렌더`)
-    })
+    // useEffect(() => {
+    //     console.log(`DiaryEditor 렌더`)
+    // })
 
     const authorInput = useRef();
     const contentInput = useRef();
