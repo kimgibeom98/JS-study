@@ -14,7 +14,7 @@ function solution(arr) {
   const result = [];
 
   while (true) {
-    if (i == arr.length - 1) {
+    if (i === arr.length - 1) {
       result.push(arr[arr.length - 1])
       break;
     }
