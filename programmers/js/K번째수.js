@@ -17,9 +17,9 @@
 function solution(array, commands) {
     const result = [];    
     for(let i = 0; i < commands.length; i++){
-        let Arr = array.slice(commands[i][0] - 1, commands[i][1])
-        let sortArr = Arr.sort((a,b) => a- b);
-        result.push(sortArr[commands[i][2] - 1])
+        const cutArray = array.slice(commands[i][0] - 1, commands[i][1])
+        const sortArray = cutArray.sort((a,b) => a - b);
+        result.push(sortArray[commands[i][2] - 1])
     }
 
     return result
