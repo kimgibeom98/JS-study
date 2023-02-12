@@ -36,3 +36,4 @@ let detailItems: DetailedDropdown<string> = {
   description: 'b',
   tag: 'c'
 }
+
