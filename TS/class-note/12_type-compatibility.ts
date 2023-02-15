@@ -1,45 +1,45 @@
-// interface
+// 인터페이스
 interface Developer {
   name: string;
   skill: string;
 }
-
-interface Person {
+// interface Person {
+//   name: string;
+//   // skill: string;
+// }
+class Person {
   name: string;
+  skill: string;
 }
 
-let developer: Developer;
-let person: Person;
-// developer = person; // X
-// person = developer; // o
-
-// https://joshua1988.github.io/ts/guide/type-compatibility.html 이론 읽기!
-
+var developer: Developer;
+var person: Person;
+developer = new Person();
+// person = developer;
 
 // 함수
-let add = function (a: number) {
-  //...
+var add = function(a: number) {
+  // ...
 }
-
-let sum = function (a: number, b: number) {
-  //...
+var sum = function(a: number, b: number) {
+  // ...
 }
-// sum = add; // O
-// add = sum; // x
+sum = add;
+// add = sum;
 
 // 제네릭
 interface Empty<T> {
   // ..
 }
-let empty1: Empty<string>;
-let empty2: Empty<number>;
-// empty1 = empty2; 0
-// empty2 = empty1; o
+var empty1: Empty<string>;
+var empty2: Empty<number>;
+empty1 = empty2;
+empty2 = empty1;
 
 interface NotEmpty<T> {
   data: T;
 }
-let notempty1: NotEmpty<string>;
-let notempty2: NotEmpty<number>;
-// notempty1 = notempty2; x
-// notempty2 = notempty1; x
+var notempty1: NotEmpty<string>;
+var notempty2: NotEmpty<number>;
+notempty1 = notempty2;
+notempty2 = notempty1;
