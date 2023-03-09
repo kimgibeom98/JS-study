@@ -9,3 +9,6 @@
 // devDependencies - 개발용 : npm i webpack - d 로 설치했을때 devDependencies - webpack, sass 등 개발을 할때 도움을 주는 개발보조 라이브러리,
 // npm run build 했을때 포함 안됨 그렇기때문에 화면조작에 필요한 라이브 러리라고 생각되면 dependencies에 넣어줘야함 ex) webpack, js-compression, sass 등
 
+// webpack
+// - ex) 쉽게 예를 들자면 나눠져 있는 index.js, lodash라이브러리를 하나로 합침 -> main.js로 before.html과 index.html참고
+// - webpack은 익명함수(즉시실행함수)구조안에 담겨있다. IIFE 

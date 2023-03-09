@@ -84,7 +84,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
       HALF_MAX_ARRAY_LENGTH = MAX_ARRAY_LENGTH >>> 1;
 
   /** Used to associate wrap methods with their bit flags. */
-  var wrapF`lags = [
+  var wrapFlags = [
     ['ary', WRAP_ARY_FLAG],
     ['bind', WRAP_BIND_FLAG],
     ['bindKey', WRAP_BIND_KEY_FLAG],
