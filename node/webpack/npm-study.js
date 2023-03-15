@@ -11,4 +11,11 @@
 
 // webpack
 // - ex) 쉽게 예를 들자면 나눠져 있는 index.js, lodash라이브러리를 하나로 합침 -> main.js로 before.html과 index.html참고
-// - webpack은 익명함수(즉시실행함수)구조안에 담겨있다. IIFE 
+// - webpack은 익명함수(즉시실행함수)구조안에 담겨있다. IIFE
+
+// 여러개의 파일을 병합해서 하나로 합쳐주는것 - module bundler
+
+// module의 개념 - 다른 module에서 가져다가 활용할수있고, module들을 합쳐서 거대한 모듈을 만들수있다
+
+// 웹팩에서의 모듈은 웹 애플리케이션을 구성하는 모든 자원을 의미한다. 즉 javscript뿐만 아니라 html,css,img,font 이런것들 모두 다 하나의 모듈이 될수있다.
+// 레이지 로딩 - 필요할때 해당 모듈을 넣어주는 기법
