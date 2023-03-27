@@ -24,6 +24,6 @@
 
 // 웹팩의 4가지 주요속성 간단 정리
 // mode - 번전 3과 4의 차이 그렇게 중요하지 않음
-// entry - 빌드를 할 대상 파일
-// output - 빌드를 하고나서(웹팩으로 변환하고)  나서의 결과 파일
+// entry - 빌드를 할 대상 파일 - https://joshua1988.github.io/webpack-guide/concepts/entry.html
+// output - 빌드를 하고나서(웹팩으로 변환하고)  나서의 결과 파일 - https://joshua1988.github.io/webpack-guide/concepts/output.html
 // module - entry에서 output으로 변환할때 중간에 개입하는것
