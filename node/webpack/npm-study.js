@@ -27,3 +27,4 @@
 // entry - 빌드를 할 대상 파일 - https://joshua1988.github.io/webpack-guide/concepts/entry.html
 // output - 빌드를 하고나서(웹팩으로 변환하고)  나서의 결과 파일 - https://joshua1988.github.io/webpack-guide/concepts/output.html
 // module - entry에서 output으로 변환할때 중간에 개입하는것
+// Loader - 웹팩이 웹 애플리케이션을 해석할 때 자바스크립트 파일이 아닌 웹 자원(html, css, images, font등)을 변활할 수 있도록 도와주는 속성.
