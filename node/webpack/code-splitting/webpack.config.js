@@ -1,4 +1,5 @@
 var path = require('path');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'none', // production, development, none -> mode에는 3가지가 있지만 실제로 배포할때는 production을 사용
@@ -11,7 +12,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          "css-loader"
+        ]
       },// babel을 사용할 경우 아래와 같이
       // { 
       //   test : /\.js$/,
@@ -19,6 +23,9 @@ module.exports = {
       // }
     ]
   },
+  plugins: [
+    new MiniCssExtractPlugin()
+  ],
 }
 
 // loader에서 use 부분에 css-loader만 넣어선 안됨, 순서도 바뀌면 안됨
