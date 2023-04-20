@@ -20,3 +20,8 @@ module.exports = {
     ]
   },
 }
+
+// loader에서 use 부분에 css-loader만 넣어선 안됨, 순서도 바뀌면 안됨
+// css-loader의 역할은 css파일을 webpack안으로 들어갈수 있게해줌
+// style-loader의 역할은 들어간 style코드를 head안에 인라인 스타일로 넣어줌
+// 항상 loader는 오른쪽에서 왼쪽 순서로 적용이 됨 ex) css-loader -> style-loader
