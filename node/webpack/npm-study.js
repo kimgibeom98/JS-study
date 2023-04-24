@@ -29,3 +29,4 @@
 // module - entry에서 output으로 변환할때 중간에 개입하는것
 // Loader - 웹팩이 웹 애플리케이션을 해석할 때 자바스크립트 파일이 아닌 웹 자원(html, css, images, font등)을 변활할 수 있도록 도와주는 속성. 
 // Loader ex) -> 실습 code-splitting폴더 브라우저 실행 ->  base.css가 html에 합쳐져있음 이러한 역할을 해주는게 Loader
+// plugin - 추가적인 기능을 제공, 로더랑 비교하면 로더는 파일을 해석하고 변환하는 과정에 관여하는 반면, 플러그인은 해당 결과물의 형태를 바꾸는 역할을 한다.

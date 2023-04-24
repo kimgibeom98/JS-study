@@ -23,7 +23,7 @@ module.exports = {
       // }
     ]
   },
-  plugins: [
+  plugins: [ // 결과물에 대한 정보를 바꿈, 혹은 변형해서 제공해줌
     new MiniCssExtractPlugin()
   ],
 }
