@@ -4,6 +4,7 @@ import UseEffect from './hookfile/useEffect';
 import UseEffectCleanup from './hookfile/useEffectCleanup';
 import UseRef from './hookfile/useRef'
 import UseRef2 from './hookfile/useRef2'
+import UseRef3 from './hookfile/useRef3'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <UseEffectCleanup />
       <UseRef />
       <UseRef2 />
+      <UseRef3 />
     </>
   );
 }
