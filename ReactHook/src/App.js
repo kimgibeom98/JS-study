@@ -8,6 +8,7 @@ import UseRef3 from './hookfile/useRef3'
 import UseRef4 from './hookfile/useRef4'
 import UseContext from './hookfile/useContext';
 import UseMemo from './hookfile/useMemo';
+import UseMemo2 from './hookfile/useMemo2';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <UseRef4 />
       <UseContext />
       <UseMemo />
+      <UseMemo2 />
     </>
   );
 }
