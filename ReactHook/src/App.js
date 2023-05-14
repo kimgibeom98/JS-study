@@ -9,6 +9,7 @@ import UseRef4 from './hookfile/useRef4'
 import UseContext from './hookfile/useContext';
 import UseMemo from './hookfile/useMemo';
 import UseMemo2 from './hookfile/useMemo2';
+import UseCallback from './hookfile/useCallback';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <UseContext />
       <UseMemo />
       <UseMemo2 />
+      <UseCallback />
     </>
   );
 }
