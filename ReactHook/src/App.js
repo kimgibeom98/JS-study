@@ -10,6 +10,7 @@ import UseContext from './hookfile/useContext';
 import UseMemo from './hookfile/useMemo';
 import UseMemo2 from './hookfile/useMemo2';
 import UseCallback from './hookfile/useCallback';
+import UseCallback2 from './hookfile/useCallback2';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <UseMemo />
       <UseMemo2 />
       <UseCallback />
+      <UseCallback2 />
     </>
   );
 }
