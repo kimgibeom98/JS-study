@@ -11,6 +11,7 @@ import UseMemo from './hookfile/useMemo';
 import UseMemo2 from './hookfile/useMemo2';
 import UseCallback from './hookfile/useCallback';
 import UseCallback2 from './hookfile/useCallback2';
+import UseReducer from './hookfile/useReducer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <UseMemo2 />
       <UseCallback />
       <UseCallback2 />
+      <UseReducer />
     </>
   );
 }
