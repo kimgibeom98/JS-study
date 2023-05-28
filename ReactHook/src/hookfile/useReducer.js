@@ -20,7 +20,7 @@ const reducer = (state, action) => {
 const UseReducer = () => {
   const [number, setNumber] = useState(0);
   const [money, dispatch] = useReducer(reducer, 0);
-  console.log(money)
+  
   return (
     <div>
       <h2>useReducer 은행에 오신것을 환영합니다.</h2>
