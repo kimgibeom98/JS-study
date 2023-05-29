@@ -13,6 +13,7 @@ import UseCallback from './hookfile/useCallback';
 import UseCallback2 from './hookfile/useCallback2';
 import UseReducer from './hookfile/useReducer';
 import UseReducer2 from './hookfile/useReducer2';
+import ReactMemo from './hookfile/reactmemo.js';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <UseCallback2 />
       <UseReducer />
       <UseReducer2 />
+      <ReactMemo />
     </>
   );
 }
