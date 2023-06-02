@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { UserContext } from "../context/UserContext";
 
-import Page from '../component/Page'
+import Page from '../components/Page'
 
 function UseContext() {
   const [isDark, setIsDark] = useState('false');

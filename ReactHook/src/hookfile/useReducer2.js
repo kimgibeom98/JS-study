@@ -1,5 +1,5 @@
 import { useState, useReducer } from "react"
-import Student from '../component/Student'
+import Student from '../components/Student'
 
 const reducer = (state, action) => {
   switch (action.type) {

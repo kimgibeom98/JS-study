@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Timer from '../component/Timer';
+import React, { useState } from "react";
+import Timer from '../components/Timer';
 const UseEffectCleanup = () => {
 
   const [showTimer, setShowTimer] = useState(false);

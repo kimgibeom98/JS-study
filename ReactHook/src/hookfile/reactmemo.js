@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 
-import Child from '../component/child'
+import Child from '../components/Child'
 
 const ReactMemo = () => {
 

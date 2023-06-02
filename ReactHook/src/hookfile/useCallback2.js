@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import Box from '../component/Box'
+import Box from '../components/Box'
 
 const UseCallback2 = () => {
   const [size, setSizes] = useState(100);
